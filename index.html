@@ -146,7 +146,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://tsouminhan.github.io/2020/04/16/2020/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://tsouminhan.github.io/2020/04/16/2020-04-hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -160,7 +160,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/04/16/2020/hello-world/" class="post-title-link" itemprop="url">github pages + Hexo架設個人靜態部落格</a>
+            <a href="/2020/04/16/2020-04-hello-world/" class="post-title-link" itemprop="url">2020/04/hello-world</a>
         </h2>
 
         <div class="post-meta">
@@ -171,7 +171,7 @@
               <span class="post-meta-item-text">發表於</span>
               
 
-              <time title="創建時間：2020-04-16 00:00:00 / 修改時間：03:20:59" itemprop="dateCreated datePublished" datetime="2020-04-16T00:00:00+08:00">2020-04-16</time>
+              <time title="創建時間：2020-04-16 03:35:00 / 修改時間：03:36:56" itemprop="dateCreated datePublished" datetime="2020-04-16T03:35:00+08:00">2020-04-16</time>
             </span>
 
           
@@ -185,9 +185,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>在看了些文章之後決定寫個部落格來玩玩看，有很多個平台可以選擇，最後我是選擇github page+ Hexo，畢竟免費而且方便管理和部屬。</p>
-<p>基本上整個部屬過程都是參考網路資料的。</p>
-<p>目錄：<br>[toc]</p>
+          <p>在看了些文章之後決定寫個部落格來玩玩看，有很多個平台可以選擇，參考許多文章後最後我是選擇github page+ Hexo，畢竟免費而且方便管理和部屬。</p>
 <h3 id="辦github-pages"><a href="#辦github-pages" class="headerlink" title="辦github pages"></a>辦github pages</h3><p><a href="https://pages.github.com/" target="_blank" rel="noopener">教學網址</a></p>
 <h3 id="安裝-Hexo-環境"><a href="#安裝-Hexo-環境" class="headerlink" title="安裝 Hexo 環境"></a>安裝 Hexo 環境</h3><p>安裝需求(Windows)：</p>
 <ul>
@@ -201,13 +199,19 @@
 
 <h3 id="修改網站配置"><a href="#修改網站配置" class="headerlink" title="修改網站配置"></a>修改網站配置</h3><p>打開<code>_config.yml</code>修改以下內容</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title	網站標題</span><br><span class="line">subtitle	網站副標題</span><br><span class="line">description	網站描述</span><br><span class="line">keywords	網站的關鍵詞。使用半角逗號 , 分隔多個關鍵詞。</span><br><span class="line">author	你的名字</span><br><span class="line">language	網站使用的語言</span><br><span class="line">timezone	網站時區，Hexo 預設使用你電腦的時區。</span><br></pre></td></tr></table></figure>
-<p><img src="C:/Users/tsou/myblog/source/images/hello-world/1.JPG" alt=""></p>
+<p><img src="1.JPG" alt=""></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url: https://&lt;username&gt;.github.io/</span><br></pre></td></tr></table></figure>
-<p><img src="C:/Users/tsou/myblog/source/images/hello-world/2.JPG" alt=""></p>
+<p><img src="2.JPG" alt=""></p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/&lt;username&gt;/&lt;project&gt;</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-<p><img src="C:/Users/tsou/myblog/source/images/hello-world/3.JPG" alt=""><br>這邊的repo和branch要自己添加，因為hexo可以部屬在不同的平台</p>
+<p><img src="3.JPG" alt=""><br>這邊的repo和branch要自己添加，因為hexo可以部屬在不同的平台</p>
 <h3 id="部屬到github"><a href="#部屬到github" class="headerlink" title="部屬到github"></a>部屬到github</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo cl  //清除之前建立的靜態檔案，也可以輸入 hexo clean</span><br><span class="line">hexo g  //建立靜態檔案，也可以輸入 hexo generate</span><br><span class="line">hexo d  //部署至 Github Pages，也可以輸入 hexo deploy</span><br></pre></td></tr></table></figure>
 <p>輸入<code>hexo d</code>會要求登入github<br>最後打開自己的網頁就可以看到結果了</p>
+<h3 id="更改主題"><a href="#更改主題" class="headerlink" title="更改主題"></a>更改主題</h3><p>這個主題<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">Next</a>我真的覺得很漂亮，很喜歡<br>打開terminal</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<p>接著打開<code>_config.yml</code>，theme改成next就可以了，記得要在重新佈署一次唷</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="參考來源"><a href="#參考來源" class="headerlink" title="參考來源"></a>參考來源</h3><p><a href="https://ed521.github.io/2019/07/hexo-install/" target="_blank" rel="noopener">https://ed521.github.io/2019/07/hexo-install/</a><br><a href="https://medium.com/@bebebobohaha/%E4%BD%BF%E7%94%A8-hexo-gitpage-%E6%90%AD%E5%BB%BA%E5%80%8B%E4%BA%BA-blog-5c6ed52f23db" target="_blank" rel="noopener">https://medium.com/@bebebobohaha/%E4%BD%BF%E7%94%A8-hexo-gitpage-%E6%90%AD%E5%BB%BA%E5%80%8B%E4%BA%BA-blog-5c6ed52f23db</a></p>
 
       
     </div>
