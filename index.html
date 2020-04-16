@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"tsouminhan.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","Pisces | Gemini":240,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"tsouminhan.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","Pisces | Gemini":240,"padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta property="og:type" content="website">
@@ -171,7 +171,7 @@
               <span class="post-meta-item-text">發表於</span>
               
 
-              <time title="創建時間：2020-04-16 03:35:00 / 修改時間：17:35:07" itemprop="dateCreated datePublished" datetime="2020-04-16T03:35:00+08:00">2020-04-16</time>
+              <time title="創建時間：2020-04-16 03:35:00 / 修改時間：17:40:04" itemprop="dateCreated datePublished" datetime="2020-04-16T03:35:00+08:00">2020-04-16</time>
             </span>
 
           
@@ -230,6 +230,9 @@
 <p>另外我在本地寫<code>.md</code>檔案時圖片不會顯示，但是部屬之後是正常的，還有這種方式只能在文章中顯示，不能在首頁顯示。</p>
 <h3 id="修改圖示"><a href="#修改圖示" class="headerlink" title="修改圖示"></a>修改圖示</h3><p>進到<code>./themes/next/_config.yml</code>檔案，修改內容設定。<br>WebTab顯示的icon：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">favicon:</span></span><br><span class="line">  <span class="attr">small:</span> <span class="string">/images/icon.png</span> <span class="comment"># 設定成你要的圖片，可以放在public/images/裡面</span></span><br></pre></td></tr></table></figure>
+
+<p>顯示大頭貼：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="comment"># 改成你要的大頭貼路徑或網址</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">/images/apple-touch-icon-next.png</span></span><br></pre></td></tr></table></figure>
 <h3 id="參考來源"><a href="#參考來源" class="headerlink" title="參考來源"></a>參考來源</h3><p><a href="https://ed521.github.io/2019/07/hexo-install/" target="_blank" rel="noopener">https://ed521.github.io/2019/07/hexo-install/</a><br><a href="https://medium.com/@bebebobohaha/%E4%BD%BF%E7%94%A8-hexo-gitpage-%E6%90%AD%E5%BB%BA%E5%80%8B%E4%BA%BA-blog-5c6ed52f23db" target="_blank" rel="noopener">https://medium.com/@bebebobohaha/%E4%BD%BF%E7%94%A8-hexo-gitpage-%E6%90%AD%E5%BB%BA%E5%80%8B%E4%BA%BA-blog-5c6ed52f23db</a><br><a href="https://yanyinhong.github.io/2017/05/02/How-to-insert-image-in-hexo-post/" target="_blank" rel="noopener">https://yanyinhong.github.io/2017/05/02/How-to-insert-image-in-hexo-post/</a></p>
 
       
