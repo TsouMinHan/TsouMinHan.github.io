@@ -114,6 +114,21 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
 
   </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
@@ -171,7 +186,16 @@
               <span class="post-meta-item-text">發表於</span>
               
 
-              <time title="創建時間：2020-04-16 03:35:00 / 修改時間：19:08:55" itemprop="dateCreated datePublished" datetime="2020-04-16T03:35:00+08:00">2020-04-16</time>
+              <time title="創建時間：2020-04-16 03:35:00 / 修改時間：19:15:36" itemprop="dateCreated datePublished" datetime="2020-04-16T03:35:00+08:00">2020-04-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
+                </span>
             </span>
 
           
@@ -244,13 +268,13 @@
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories</span> <span class="comment"># 手動增加頁面</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about</span> <span class="comment"># 手動增加頁面</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags</span> <span class="comment"># 手動增加頁面</span></span><br><span class="line">  <span class="comment">#commonweal: /404.html # 手動增加頁面</span></span><br></pre></td></tr></table></figure>
 <p>新增標籤頁面：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">"tags"</span></span><br></pre></td></tr></table></figure>
-<p>把剛剛新生成的檔案進行編輯：<br>新增<code>type: &quot;tags&quot;</code><br><img src="4.jpg" alt=""></p>
+<p>把剛剛新生成的檔案進行編輯：<br>新增<code>type: &quot;tags&quot;</code><br><img src="4.JPG" alt=""></p>
 <p>新增分類頁面：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">"categories"</span></span><br></pre></td></tr></table></figure>
-<p>把剛剛新生成的檔案進行編輯：<br>新增<code>type: &quot;categories&quot;</code><br><img src="5.jpg" alt=""></p>
+<p>把剛剛新生成的檔案進行編輯：<br>新增<code>type: &quot;categories&quot;</code><br><img src="5.JPG" alt=""></p>
 <p>新增關於頁面：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">"about"</span></span><br></pre></td></tr></table></figure>
-<p>把剛剛新生成的檔案進行編輯：<br>新增<code>type: &quot;about&quot;</code><br><img src="6.jpg" alt=""></p>
+<p>把剛剛新生成的檔案進行編輯：<br>新增<code>type: &quot;about&quot;</code><br><img src="6.JPG" alt=""></p>
 <p>記得檢查有沒有修改<code>_config.yml</code>檔案哦。</p>
 <h3 id="參考來源"><a href="#參考來源" class="headerlink" title="參考來源"></a>參考來源</h3><ol>
 <li><a href="https://ed521.github.io/2019/07/hexo-install/" target="_blank" rel="noopener">https://ed521.github.io/2019/07/hexo-install/</a></li>
@@ -345,8 +369,15 @@
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
+          
         <span class="site-state-item-count">1</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
