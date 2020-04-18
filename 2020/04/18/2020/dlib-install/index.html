@@ -34,7 +34,6 @@
 <meta property="article:modified_time" content="2020-04-18T03:57:49.000Z">
 <meta property="article:author" content="小奇毛">
 <meta property="article:tag" content="python">
-<meta property="article:tag" content="dlib">
 <meta property="article:tag" content="人臉辨識">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://tsouminhan.github.io/2020/04/18/2020/dlib-install/1.png">
@@ -227,6 +226,7 @@
 <li>python：3.7.3</li>
 <li>dlib：19.19</li>
 <li>cuda：10</li>
+<li>CMake：3.7.0</li>
 <li>Visual Studio 2017</li>
 </ul>
 <h2 id="安裝步驟"><a href="#安裝步驟" class="headerlink" title="安裝步驟"></a>安裝步驟</h2><h3 id="安裝python"><a href="#安裝python" class="headerlink" title="安裝python"></a>安裝python</h3><p> 這個就請各位自己查吧</p>
@@ -235,6 +235,7 @@
 <p>有些分享的文章是使用2015、2019版本，我也都安裝過但是都失敗，問題是不是出在VS版本上我也不清楚，但我在查閱資料時有看到dlib不建議使用2019，似乎是因為2019太新了</p>
 <p><img src="1.png" alt=""></p>
 <p>記得勾選”使用C++的桌面開發”</p>
+<h3 id="安裝CMake"><a href="#安裝CMake" class="headerlink" title="安裝CMake"></a>安裝CMake</h3><p>安裝CMake<br><a href="https://cmake.org/download/" target="_blank" rel="noopener">下載網址</a></p>
 <h3 id="安裝CUDA"><a href="#安裝CUDA" class="headerlink" title="安裝CUDA"></a>安裝CUDA</h3><p><a href="https://developer.nvidia.com/cuda-toolkit-archive" target="_blank" rel="noopener">下載網址</a></p>
 <p>原本我是使用CUDA9，最後我改用CUDA10就成功了。</p>
 <h3 id="下載cudnn"><a href="#下載cudnn" class="headerlink" title="下載cudnn"></a>下載cudnn</h3><p><a href="https://developer.nvidia.com/rdp/cudnn-download" target="_blank" rel="noopener">下載網址</a></p>
@@ -271,7 +272,6 @@
           
           <div class="post-tags">
               <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
-              <a href="/tags/dlib/" rel="tag"><i class="fa fa-tag"></i> dlib</a>
               <a href="/tags/%E4%BA%BA%E8%87%89%E8%BE%A8%E8%AD%98/" rel="tag"><i class="fa fa-tag"></i> 人臉辨識</a>
           </div>
 
@@ -343,7 +343,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#版本資訊"><span class="nav-number">1.</span> <span class="nav-text">版本資訊</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安裝步驟"><span class="nav-number">2.</span> <span class="nav-text">安裝步驟</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安裝python"><span class="nav-number">2.1.</span> <span class="nav-text">安裝python</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安裝Visual-Studio"><span class="nav-number">2.2.</span> <span class="nav-text">安裝Visual Studio</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安裝CUDA"><span class="nav-number">2.3.</span> <span class="nav-text">安裝CUDA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下載cudnn"><span class="nav-number">2.4.</span> <span class="nav-text">下載cudnn</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安裝dlib"><span class="nav-number">2.5.</span> <span class="nav-text">安裝dlib</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#確認GPU使用"><span class="nav-number">2.6.</span> <span class="nav-text">確認GPU使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#結論"><span class="nav-number">3.</span> <span class="nav-text">結論</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#資料來源"><span class="nav-number">4.</span> <span class="nav-text">資料來源</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#版本資訊"><span class="nav-number">1.</span> <span class="nav-text">版本資訊</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安裝步驟"><span class="nav-number">2.</span> <span class="nav-text">安裝步驟</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安裝python"><span class="nav-number">2.1.</span> <span class="nav-text">安裝python</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安裝Visual-Studio"><span class="nav-number">2.2.</span> <span class="nav-text">安裝Visual Studio</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安裝CMake"><span class="nav-number">2.3.</span> <span class="nav-text">安裝CMake</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安裝CUDA"><span class="nav-number">2.4.</span> <span class="nav-text">安裝CUDA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下載cudnn"><span class="nav-number">2.5.</span> <span class="nav-text">下載cudnn</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安裝dlib"><span class="nav-number">2.6.</span> <span class="nav-text">安裝dlib</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#確認GPU使用"><span class="nav-number">2.7.</span> <span class="nav-text">確認GPU使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#結論"><span class="nav-number">3.</span> <span class="nav-text">結論</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#資料來源"><span class="nav-number">4.</span> <span class="nav-text">資料來源</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -372,7 +372,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
