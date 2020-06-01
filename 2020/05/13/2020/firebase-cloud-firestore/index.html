@@ -22,7 +22,7 @@
 
   <meta name="description" content="Firebase 有很多好用的功能，其中之一就是資料庫，資料庫又分成Cloud Firestore 和 Real Time Database，各有各的優缺點，我主要是用Cloud Firestore，目前使用下來我覺得非常的方便，接下來會介紹些我使用過的指令。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="firebase-cloud-firestore">
+<meta property="og:title" content="firebase-cloud-firestore 新增刪除修改（CRUD）">
 <meta property="og:url" content="https://tsouminhan.github.io/2020/05/13/2020/firebase-cloud-firestore/index.html">
 <meta property="og:site_name" content="小奇毛的部落格">
 <meta property="og:description" content="Firebase 有很多好用的功能，其中之一就是資料庫，資料庫又分成Cloud Firestore 和 Real Time Database，各有各的優缺點，我主要是用Cloud Firestore，目前使用下來我覺得非常的方便，接下來會介紹些我使用過的指令。">
@@ -30,6 +30,8 @@
 <meta property="article:published_time" content="2020-05-13T13:32:20.000Z">
 <meta property="article:modified_time" content="2020-05-13T13:32:20.000Z">
 <meta property="article:author" content="小奇毛">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="資料庫">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://tsouminhan.github.io/2020/05/13/2020/firebase-cloud-firestore/">
@@ -45,7 +47,7 @@
   };
 </script>
 
-  <title>firebase-cloud-firestore | 小奇毛的部落格</title>
+  <title>firebase-cloud-firestore 新增刪除修改（CRUD） | 小奇毛的部落格</title>
   
 
 
@@ -177,7 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          firebase-cloud-firestore
+          firebase-cloud-firestore 新增刪除修改（CRUD）
         </h1>
 
         <div class="post-meta">
@@ -188,6 +190,15 @@
               <span class="post-meta-item-text">發表於</span>
 
               <time title="創建時間：2020-05-13 21:32:20" itemprop="dateCreated datePublished" datetime="2020-05-13T21:32:20+08:00">2020-05-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
             </span>
 
           
@@ -279,7 +290,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>文章連結：</strong>
-    <a href="https://tsouminhan.github.io/2020/05/13/2020/firebase-cloud-firestore/" title="firebase-cloud-firestore">https://tsouminhan.github.io/2020/05/13/2020/firebase-cloud-firestore/</a>
+    <a href="https://tsouminhan.github.io/2020/05/13/2020/firebase-cloud-firestore/" title="firebase-cloud-firestore 新增刪除修改（CRUD）">https://tsouminhan.github.io/2020/05/13/2020/firebase-cloud-firestore/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh_TW" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！
@@ -289,6 +300,11 @@
 
 
       <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
+              <a href="/tags/%E8%B3%87%E6%96%99%E5%BA%AB/" rel="tag"><i class="fa fa-tag"></i> 資料庫</a>
+          </div>
 
         
 
@@ -299,7 +315,10 @@
     <a href="/2020/04/23/2020/python-tips/" rel="prev" title="python 好用卻常忘記的指令">
       <i class="fa fa-chevron-left"></i> python 好用卻常忘記的指令
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/06/01/2020/VSCode-shortcuts/" rel="next" title="VSCode-shortcuts">
+      VSCode-shortcuts <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -381,7 +400,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -394,7 +413,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -443,13 +462,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">總字數：</span>
-    <span title="總字數">11k</span>
+    <span title="總字數">12k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
-    <span title="所需總閱讀時間">10 分鐘</span>
+    <span title="所需總閱讀時間">11 分鐘</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
   </div>
@@ -539,7 +558,7 @@
   var disqus_config = function() {
     this.page.url = "https://tsouminhan.github.io/2020/05/13/2020/firebase-cloud-firestore/";
     this.page.identifier = "2020/05/13/2020/firebase-cloud-firestore/";
-    this.page.title = "firebase-cloud-firestore";
+    this.page.title = "firebase-cloud-firestore 新增刪除修改（CRUD）";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
