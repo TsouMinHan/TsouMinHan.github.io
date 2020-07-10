@@ -20,21 +20,25 @@
     var CONFIG = {"hostname":"tsouminhan.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Firebase 有很多好用的功能，其中之一就是資料庫，資料庫又分成Cloud Firestore 和 Real Time Database，各有各的優缺點，我主要是用Cloud Firestore，目前使用下來我覺得非常的方便，接下來會介紹些我使用過的指令。">
+  <meta name="description" content="安裝dlib環境花了我大概2天的時間吧… 怕我自己忘記當初安裝的流程、版本和遇到的問題，在這篇文章中記錄下來，有興趣的朋友可以自己玩玩看，基本上很簡單啦，只要版本裝對…">
 <meta property="og:type" content="article">
-<meta property="og:title" content="firebase-cloud-firestore 新增刪除修改（CRUD）">
-<meta property="og:url" content="https://tsouminhan.github.io/2020/05/13/2020/firebase-cloud-firestore/index.html">
+<meta property="og:title" content="Windows10 python3.7 dlib 人臉辨識安裝">
+<meta property="og:url" content="https://tsouminhan.github.io/2020/04/18/dlib-install/index.html">
 <meta property="og:site_name" content="小奇毛的部落格">
-<meta property="og:description" content="Firebase 有很多好用的功能，其中之一就是資料庫，資料庫又分成Cloud Firestore 和 Real Time Database，各有各的優缺點，我主要是用Cloud Firestore，目前使用下來我覺得非常的方便，接下來會介紹些我使用過的指令。">
+<meta property="og:description" content="安裝dlib環境花了我大概2天的時間吧… 怕我自己忘記當初安裝的流程、版本和遇到的問題，在這篇文章中記錄下來，有興趣的朋友可以自己玩玩看，基本上很簡單啦，只要版本裝對…">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2020-05-13T13:32:20.000Z">
-<meta property="article:modified_time" content="2020-05-13T13:32:20.000Z">
+<meta property="og:image" content="https://tsouminhan.github.io/2020/04/18/dlib-install/1.png">
+<meta property="og:image" content="https://tsouminhan.github.io/2020/04/18/dlib-install/2.png">
+<meta property="og:image" content="https://tsouminhan.github.io/2020/04/18/dlib-install/3.png">
+<meta property="article:published_time" content="2020-04-18T03:57:49.000Z">
+<meta property="article:modified_time" content="2020-04-18T03:57:49.000Z">
 <meta property="article:author" content="小奇毛">
 <meta property="article:tag" content="python">
-<meta property="article:tag" content="資料庫">
+<meta property="article:tag" content="人臉辨識">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tsouminhan.github.io/2020/04/18/dlib-install/1.png">
 
-<link rel="canonical" href="https://tsouminhan.github.io/2020/05/13/2020/firebase-cloud-firestore/">
+<link rel="canonical" href="https://tsouminhan.github.io/2020/04/18/dlib-install/">
 
 
 <script id="page-configurations">
@@ -47,7 +51,7 @@
   };
 </script>
 
-  <title>firebase-cloud-firestore 新增刪除修改（CRUD） | 小奇毛的部落格</title>
+  <title>Windows10 python3.7 dlib 人臉辨識安裝 | 小奇毛的部落格</title>
   
 
 
@@ -170,7 +174,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://tsouminhan.github.io/2020/05/13/2020/firebase-cloud-firestore/">
+    <link itemprop="mainEntityOfPage" href="https://tsouminhan.github.io/2020/04/18/dlib-install/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head_photo.JPG">
@@ -183,7 +187,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          firebase-cloud-firestore 新增刪除修改（CRUD）
+          Windows10 python3.7 dlib 人臉辨識安裝
         </h1>
 
         <div class="post-meta">
@@ -193,7 +197,7 @@
               </span>
               <span class="post-meta-item-text">發表於</span>
 
-              <time title="創建時間：2020-05-13 21:32:20" itemprop="dateCreated datePublished" datetime="2020-05-13T21:32:20+08:00">2020-05-13</time>
+              <time title="創建時間：2020-04-18 11:57:49" itemprop="dateCreated datePublished" datetime="2020-04-18T11:57:49+08:00">2020-04-18</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -221,8 +225,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2020/05/13/2020/firebase-cloud-firestore/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/05/13/2020/firebase-cloud-firestore/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2020/04/18/dlib-install/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/04/18/dlib-install/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -232,14 +236,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">文章字數：</span>
-              <span>1.9k</span>
+              <span>1.3k</span>
             </span>
             <span class="post-meta-item" title="所需閱讀時間">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-              <span>2 分鐘</span>
+              <span>1 分鐘</span>
             </span>
 
         </div>
@@ -251,33 +255,50 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Firebase 有很多好用的功能，其中之一就是資料庫，資料庫又分成Cloud Firestore 和 Real Time Database，各有各的優缺點，我主要是用Cloud Firestore，目前使用下來我覺得非常的方便，接下來會介紹些我使用過的指令。</p>
+        <p>安裝dlib環境花了我大概2天的時間吧…</p>
+<p>怕我自己忘記當初安裝的流程、版本和遇到的問題，在這篇文章中記錄下來，有興趣的朋友可以自己玩玩看，基本上很簡單啦，只要版本裝對…</p>
 <a id="more"></a>
 
-<h2 id="Cloud-Firestore-介紹"><a href="#Cloud-Firestore-介紹" class="headerlink" title="Cloud Firestore 介紹"></a>Cloud Firestore 介紹</h2><p>是NoSQL資料庫，具有擴展性，具有擴展性、同步性、支援離線存檔(這個我還沒有用過)，不論是IOS、Android、Web應用程式，都可以透過伺服器SDK進行資料存取，支援多種語言(Node.js，Java，Python，Unity，C ++和Go SDK)，我主要是使用Python，所以接下來都會介紹Python的指令。</p>
-<h2 id="創建專案"><a href="#創建專案" class="headerlink" title="創建專案"></a>創建專案</h2><p>進入Firebase網頁，登入Google帳號，選擇新增專案。<br>建立好專案之後到設定頁面，選擇服務帳戶，點選產生新的私密金鑰(這個檔案很重要，不要放在開放的伺服器上或者給別人)。<br>#TODO</p>
-<h2 id="安裝套件"><a href="#安裝套件" class="headerlink" title="安裝套件"></a>安裝套件</h2><p>‵pip install –upgrade firebase-admin‵</p>
-<h2 id="初始化設定"><a href="#初始化設定" class="headerlink" title="初始化設定"></a>初始化設定</h2><p>初始化只能設定一次，如果設定第二次會出錯</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> firebase_admin</span><br><span class="line"><span class="keyword">from</span> firebase_admin <span class="keyword">import</span> credentials</span><br><span class="line"><span class="keyword">from</span> firebase_admin <span class="keyword">import</span> firestore</span><br><span class="line"></span><br><span class="line"><span class="comment"># Use a service account</span></span><br><span class="line">cred = credentials.Certificate(<span class="string">'path/to/serviceAccount.json'</span>)   <span class="comment"># 這邊的json檔案就是創建專案時下載的金鑰檔案</span></span><br><span class="line">firebase_admin.initialize_app(cred)</span><br><span class="line"></span><br><span class="line">db = firestore.client()</span><br></pre></td></tr></table></figure>
+<p>在開始之前，請注意安裝的<strong>程式版本很重要</strong>，我當初也是因為版本問題所以花了很多時間在安裝程式，還有就是<strong>錯誤訊息要看</strong>，雖然字很多看得很痛苦，但是盲目猜測錯誤更痛苦。</p>
+<h2 id="版本資訊"><a href="#版本資訊" class="headerlink" title="版本資訊"></a>版本資訊</h2><ul>
+<li>作業系統：Windows10</li>
+<li>python：3.7.3</li>
+<li>dlib：19.19</li>
+<li>cuda：10</li>
+<li>CMake：3.7.0</li>
+<li>Visual Studio 2017</li>
+</ul>
+<h2 id="安裝步驟"><a href="#安裝步驟" class="headerlink" title="安裝步驟"></a>安裝步驟</h2><h3 id="安裝python"><a href="#安裝python" class="headerlink" title="安裝python"></a>安裝python</h3><p> 這個就請各位自己查吧</p>
+<h3 id="安裝Visual-Studio"><a href="#安裝Visual-Studio" class="headerlink" title="安裝Visual Studio"></a>安裝Visual Studio</h3><p>我是裝Visual Studio Community 2017</p>
+<p><a href="https://my.visualstudio.com/Downloads?q=visual%20studio%202017" target="_blank" rel="noopener">下載連結</a></p>
+<p>有些分享的文章是使用2015、2019版本，我也都安裝過但是都失敗，問題是不是出在VS版本上我也不清楚，但我在查閱資料時有看到dlib不建議使用2019，似乎是因為2019太新了</p>
+<p><img src="1.png" alt=""></p>
+<p>記得勾選”使用C++的桌面開發”</p>
+<h3 id="安裝CMake"><a href="#安裝CMake" class="headerlink" title="安裝CMake"></a>安裝CMake</h3><p>安裝CMake<br><a href="https://cmake.org/download/" target="_blank" rel="noopener">下載網址</a></p>
+<h3 id="安裝CUDA"><a href="#安裝CUDA" class="headerlink" title="安裝CUDA"></a>安裝CUDA</h3><p><a href="https://developer.nvidia.com/cuda-toolkit-archive" target="_blank" rel="noopener">下載網址</a></p>
+<p>原本我是使用CUDA9，最後我改用CUDA10就成功了。</p>
+<h3 id="下載cudnn"><a href="#下載cudnn" class="headerlink" title="下載cudnn"></a>下載cudnn</h3><p><a href="https://developer.nvidia.com/rdp/cudnn-download" target="_blank" rel="noopener">下載網址</a></p>
+<p>要登入帳號才能下載，記得要對應到CUDA版本。</p>
+<p>打開Terminal進到<code>./NVIDIA GPU Computing Toolkit/CUDA/v10.0/extras/demo_suite</code></p>
+<p>執行<code>bandwidthTest.exe</code><br><img src="2.png" alt=""></p>
+<p>執行<code>deviceQuery.exe</code><br><img src="3.png" alt=""></p>
+<p>兩個都顯示pass就可以了，但是我也不清楚這邊做了什麼，但是大概就是有沒有配對到你的顯示卡吧，如果有人知道可以告訴我，我會很感謝你。</p>
+<h3 id="安裝dlib"><a href="#安裝dlib" class="headerlink" title="安裝dlib"></a>安裝dlib</h3><p><a href="http://dlib.net/" target="_blank" rel="noopener">下載網址</a></p>
+<p>dlib 是一款C++的人臉辨識套件，可以編譯成pthon。</p>
+<p>接著cmd進入到dlib資料夾</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 這是比較新版本的安裝方法，會自動檢查CUDA，因為我的版本比較新，所以用這個方法</span><br><span class="line">python setup.py install </span><br><span class="line">// 這是比較舊版的安裝方法，似乎是要手動設定CUDA，很多教學都是用這個方法</span><br><span class="line">python setup.py install --yes USE_AVX_INSTRUCTIONS --yes DLIB_USE_CUDA</span><br></pre></td></tr></table></figure>
 
-<p>可以用這種方式來判斷是否有連線</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> firebase_admin</span><br><span class="line"><span class="keyword">from</span> firebase_admin <span class="keyword">import</span> credentials</span><br><span class="line"><span class="keyword">from</span> firebase_admin <span class="keyword">import</span> firestore</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">not</span> len(firebase_admin._apps)): <span class="comment"># 檢查是否有連線到資料庫((根據參考的資料應該是這樣子沒有錯))</span></span><br><span class="line">    cred = credentials.Certificate(<span class="string">'path/to/serviceAccount.json'</span>)</span><br><span class="line">    firebase_admin.initialize_app(cred)</span><br><span class="line"></span><br><span class="line">db = firestore.client()</span><br></pre></td></tr></table></figure>
+<h3 id="確認GPU使用"><a href="#確認GPU使用" class="headerlink" title="確認GPU使用"></a>確認GPU使用</h3><p>成功安裝之後就可以使用該套件了，但是若沒有啟用GPU的話便是速度很慢。</p>
+<p>檢查的方式如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dlib</span><br><span class="line"></span><br><span class="line"><span class="comment"># 顯示是否有使用GPU，如果是False依舊可以使用套件，但沒有GPU速度會很慢</span></span><br><span class="line">print(dlib.DLIB_USE_CUDA) </span><br><span class="line"><span class="comment"># True</span></span><br><span class="line"><span class="comment"># 顯示可以使用的GPU數量</span></span><br><span class="line">print(dlib.cuda.get_num_devices())</span><br><span class="line"><span class="comment"># 1</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="集合和文件"><a href="#集合和文件" class="headerlink" title="集合和文件"></a>集合和文件</h2><p>Cloud Firestore的資料格是像是資料夾一樣，每個資料夾是一個集合(Collection)，每個資料夾下可以有很多個文件(Document)，每個文件底下可以有很多資料，而在文件底下又可以開新的集合，這樣子重複下去。<br>當時在學習時覺得這樣子的概念很抽象，但是實際創建資料並且去讀取，會發現很簡單。<br>#TODO</p>
-<h2 id="新增資料"><a href="#新增資料" class="headerlink" title="新增資料"></a>新增資料</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">doc_ref = db.collection(<span class="string">u'users'</span>).document(<span class="string">u'alovelace'</span>)    <span class="comment"># 讀取'users'集合裡的'alovelace'文件</span></span><br><span class="line"><span class="comment"># 文件的資料資料型態是dict</span></span><br><span class="line">doc_ref.set(&#123;</span><br><span class="line">    <span class="string">u'first'</span>: <span class="string">u'Ada'</span>,</span><br><span class="line">    <span class="string">u'last'</span>: <span class="string">u'Lovelace'</span>,</span><br><span class="line">    <span class="string">u'born'</span>: <span class="number">1815</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<h2 id="讀取資料"><a href="#讀取資料" class="headerlink" title="讀取資料"></a>讀取資料</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">users_ref = db.collection(<span class="string">u'users'</span>)</span><br><span class="line">docs = users_ref.stream() <span class="comment"># 取得集合的文件，也可以用get()</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> doc <span class="keyword">in</span> docs:</span><br><span class="line">    <span class="comment"># doc.id是每個文件的id，doc.to_dict()是把文件的資料轉成dict型態</span></span><br><span class="line">    print(<span class="string">u'&#123;&#125; =&gt; &#123;&#125;'</span>.format(doc.id, doc.to_dict()))</span><br></pre></td></tr></table></figure>
-
-<h2 id="刪除資料"><a href="#刪除資料" class="headerlink" title="刪除資料"></a>刪除資料</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">doc_ref = db.collection(<span class="string">u'users'</span>)</span><br><span class="line">doc_ref.delete()</span><br></pre></td></tr></table></figure>
-
-<h2 id="修改資料"><a href="#修改資料" class="headerlink" title="修改資料"></a>修改資料</h2><p>如果是新的key則是新增，例如本來文件內就有title的key執行後會修改值，但若沒有title的話就是直接新增。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">doc_ref = db.collection(<span class="string">u'users'</span>).document(<span class="string">u'alovelace'</span>)</span><br><span class="line">doc_ref.update(&#123;<span class="string">'title'</span>: _ls&#125;)</span><br></pre></td></tr></table></figure>
-
-<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>基本上我只使用這幾個功能，使用起來非常的方便。</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li><a href="https://stackoverflow.com/questions/44293241/check-if-a-firebase-app-is-already-initialized-in-python" target="_blank" rel="noopener">check if a Firebase App is already initialized in python
-</a></li>
-<li><a href="https://firebase.google.com/docs/firestore/quickstart#python" target="_blank" rel="noopener">Google Firebase Document</a></li>
+<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>透過安裝dlib讓我學到該怎麼查閱資料，另外就是不要因為錯誤訊息字很多就不看，狠下心來看那些訊息之後會發現錯誤的地方會更加明確，才更好下關鍵字查。</p>
+<p>另外資料來源的部份太多了，我沒有存下來，因此只貼上最後我參考的文章，如果我有存下來應該也不會貼，畢竟大概看了一百個網站有了。</p>
+<p>之後會再寫相關的文章。</p>
+<h2 id="資料來源"><a href="#資料來源" class="headerlink" title="資料來源"></a>資料來源</h2><ol>
+<li><a href="https://blog.csdn.net/u010921682/article/details/90268910" target="_blank" rel="noopener">windows10 python 使用dlib cuda 編譯和安裝</a></li>
+<li>無數個我忘記儲存下來的網站</li>
 </ol>
 
     </div>
@@ -294,7 +315,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>文章連結：</strong>
-    <a href="https://tsouminhan.github.io/2020/05/13/2020/firebase-cloud-firestore/" title="firebase-cloud-firestore 新增刪除修改（CRUD）">https://tsouminhan.github.io/2020/05/13/2020/firebase-cloud-firestore/</a>
+    <a href="https://tsouminhan.github.io/2020/04/18/dlib-install/" title="Windows10 python3.7 dlib 人臉辨識安裝">https://tsouminhan.github.io/2020/04/18/dlib-install/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh_TW" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！
@@ -307,7 +328,7 @@
           
           <div class="post-tags">
               <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
-              <a href="/tags/%E8%B3%87%E6%96%99%E5%BA%AB/" rel="tag"><i class="fa fa-tag"></i> 資料庫</a>
+              <a href="/tags/%E4%BA%BA%E8%87%89%E8%BE%A8%E8%AD%98/" rel="tag"><i class="fa fa-tag"></i> 人臉辨識</a>
           </div>
 
         
@@ -316,12 +337,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/04/23/2020/python-tips/" rel="prev" title="python 好用卻常忘記的指令">
-      <i class="fa fa-chevron-left"></i> python 好用卻常忘記的指令
+    <a href="/2020/04/17/hexo-setting-and-command/" rel="prev" title="Hexo 相關設定和指令">
+      <i class="fa fa-chevron-left"></i> Hexo 相關設定和指令
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/06/01/2020/VSCode-shortcuts/" rel="next" title="VSCode快捷鍵">
-      VSCode快捷鍵 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/04/21/Selenium/" rel="next" title="Selenium 相關操作">
+      Selenium 相關操作 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -388,7 +409,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Cloud-Firestore-介紹"><span class="nav-number">1.</span> <span class="nav-text">Cloud Firestore 介紹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#創建專案"><span class="nav-number">2.</span> <span class="nav-text">創建專案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安裝套件"><span class="nav-number">3.</span> <span class="nav-text">安裝套件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化設定"><span class="nav-number">4.</span> <span class="nav-text">初始化設定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合和文件"><span class="nav-number">5.</span> <span class="nav-text">集合和文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新增資料"><span class="nav-number">6.</span> <span class="nav-text">新增資料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#讀取資料"><span class="nav-number">7.</span> <span class="nav-text">讀取資料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#刪除資料"><span class="nav-number">8.</span> <span class="nav-text">刪除資料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改資料"><span class="nav-number">9.</span> <span class="nav-text">修改資料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#結論"><span class="nav-number">10.</span> <span class="nav-text">結論</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#參考資料"><span class="nav-number">11.</span> <span class="nav-text">參考資料</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#版本資訊"><span class="nav-number">1.</span> <span class="nav-text">版本資訊</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安裝步驟"><span class="nav-number">2.</span> <span class="nav-text">安裝步驟</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安裝python"><span class="nav-number">2.1.</span> <span class="nav-text">安裝python</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安裝Visual-Studio"><span class="nav-number">2.2.</span> <span class="nav-text">安裝Visual Studio</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安裝CMake"><span class="nav-number">2.3.</span> <span class="nav-text">安裝CMake</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安裝CUDA"><span class="nav-number">2.4.</span> <span class="nav-text">安裝CUDA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下載cudnn"><span class="nav-number">2.5.</span> <span class="nav-text">下載cudnn</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安裝dlib"><span class="nav-number">2.6.</span> <span class="nav-text">安裝dlib</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#確認GPU使用"><span class="nav-number">2.7.</span> <span class="nav-text">確認GPU使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#結論"><span class="nav-number">3.</span> <span class="nav-text">結論</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#資料來源"><span class="nav-number">4.</span> <span class="nav-text">資料來源</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -556,9 +577,9 @@
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://tsouminhan.github.io/2020/05/13/2020/firebase-cloud-firestore/";
-    this.page.identifier = "2020/05/13/2020/firebase-cloud-firestore/";
-    this.page.title = "firebase-cloud-firestore 新增刪除修改（CRUD）";
+    this.page.url = "https://tsouminhan.github.io/2020/04/18/dlib-install/";
+    this.page.identifier = "2020/04/18/dlib-install/";
+    this.page.title = "Windows10 python3.7 dlib 人臉辨識安裝";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
