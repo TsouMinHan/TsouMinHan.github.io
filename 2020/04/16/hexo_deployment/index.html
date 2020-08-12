@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"tsouminhan.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="記錄一下traceback套件的指令，會顯示詳細的錯誤訊息，在debug時很方便，有許多的指令，但我看不太懂介紹，測試幾個指令之後覺得就只是顯示錯誤的訊息數量跟形式不太一樣，所以我就只記下我覺得好用的指令，其實也就一個而已，但是要用的時候總是會忘記。">
+  <meta name="description" content="在看了些文章之後決定寫部落格來玩玩看，文中提到部落格可以讓別人了解自己會哪些技術或喜歡哪些事物或者當作自己的作品集，並透過輸出的方式加深自己的印象。查了相關資料後和根據自己對於各平台的了解，最後我選擇github page + Hexo，優點是免費、方便管理和佈署，而且我當初看到一個很喜歡的主題是在Hexo使用的，缺點是github是開源的因此大家有你的檔案，但我認為這沒有什麼影響啦。 我把自己架">
 <meta property="og:type" content="article">
-<meta property="og:title" content="traceback套件">
-<meta property="og:url" content="https://tsouminhan.github.io/2020/06/09/traceback-package/index.html">
+<meta property="og:title" content="github pages + Hexo架設個人靜態部落格">
+<meta property="og:url" content="https://tsouminhan.github.io/2020/04/16/hexo_deployment/index.html">
 <meta property="og:site_name" content="小奇毛的部落格">
-<meta property="og:description" content="記錄一下traceback套件的指令，會顯示詳細的錯誤訊息，在debug時很方便，有許多的指令，但我看不太懂介紹，測試幾個指令之後覺得就只是顯示錯誤的訊息數量跟形式不太一樣，所以我就只記下我覺得好用的指令，其實也就一個而已，但是要用的時候總是會忘記。">
+<meta property="og:description" content="在看了些文章之後決定寫部落格來玩玩看，文中提到部落格可以讓別人了解自己會哪些技術或喜歡哪些事物或者當作自己的作品集，並透過輸出的方式加深自己的印象。查了相關資料後和根據自己對於各平台的了解，最後我選擇github page + Hexo，優點是免費、方便管理和佈署，而且我當初看到一個很喜歡的主題是在Hexo使用的，缺點是github是開源的因此大家有你的檔案，但我認為這沒有什麼影響啦。 我把自己架">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2020-06-09T11:08:56.000Z">
-<meta property="article:modified_time" content="2020-06-09T11:08:56.000Z">
+<meta property="article:published_time" content="2020-04-15T19:35:00.000Z">
+<meta property="article:modified_time" content="2020-07-10T19:28:46.000Z">
 <meta property="article:author" content="小奇毛">
-<meta property="article:tag" content="python, package">
+<meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://tsouminhan.github.io/2020/06/09/traceback-package/">
+<link rel="canonical" href="https://tsouminhan.github.io/2020/04/16/hexo_deployment/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>traceback套件 | 小奇毛的部落格</title>
+  <title>github pages + Hexo架設個人靜態部落格 | 小奇毛的部落格</title>
   
 
 
@@ -169,7 +169,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://tsouminhan.github.io/2020/06/09/traceback-package/">
+    <link itemprop="mainEntityOfPage" href="https://tsouminhan.github.io/2020/04/16/hexo_deployment/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head_photo.JPG">
@@ -182,7 +182,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          traceback套件
+          github pages + Hexo架設個人靜態部落格
         </h1>
 
         <div class="post-meta">
@@ -192,15 +192,22 @@
               </span>
               <span class="post-meta-item-text">發表於</span>
 
-              <time title="創建時間：2020-06-09 19:08:56" itemprop="dateCreated datePublished" datetime="2020-06-09T19:08:56+08:00">2020-06-09</time>
+              <time title="創建時間：2020-04-16 03:35:00" itemprop="dateCreated datePublished" datetime="2020-04-16T03:35:00+08:00">2020-04-16</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2020-07-11 03:28:46" itemprop="dateModified" datetime="2020-07-11T03:28:46+08:00">2020-07-11</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分類於</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                  <a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
                 </span>
             </span>
 
@@ -220,8 +227,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2020/06/09/traceback-package/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/06/09/traceback-package/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2020/04/16/hexo_deployment/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/04/16/hexo_deployment/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -231,14 +238,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">文章字數：</span>
-              <span>2.1k</span>
+              <span>1.6k</span>
             </span>
             <span class="post-meta-item" title="所需閱讀時間">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-              <span>2 分鐘</span>
+              <span>1 分鐘</span>
             </span>
 
         </div>
@@ -250,23 +257,41 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>記錄一下<code>traceback</code>套件的指令，會顯示詳細的錯誤訊息，在debug時很方便，有許多的指令，但我看不太懂介紹，測試幾個指令之後覺得就只是顯示錯誤的訊息數量跟形式不太一樣，所以我就只記下我覺得好用的指令，其實也就一個而已，但是要用的時候總是會忘記。</p>
+        <p>在看了些文章之後決定寫部落格來玩玩看，文中提到部落格可以讓別人了解自己會哪些技術或喜歡哪些事物或者當作自己的作品集，並透過輸出的方式加深自己的印象。<br>查了相關資料後和根據自己對於各平台的了解，最後我選擇github page + Hexo，優點是免費、方便管理和佈署，而且我當初看到一個很喜歡的主題是在Hexo使用的，缺點是github是開源的因此大家有你的檔案，但我認為這沒有什麼影響啦。</p>
+<p>我把自己架站的過程寫成筆記，除了可以回顧之外如果大家有興趣可以看看。<br>照著這些步驟做就可以做出一個自己的網站了，之後再做些設定就可以把網站弄得票漂亮亮的，個人覺得很好玩不用寫很多程式就可以做很多事情。</p>
 <a id="more"></a>
 
-<p>在<code>try/except</code>時使用起來很方便。</p>
-<p>正常情況下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    int(<span class="string">"asd"</span>)</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">    print(e)</span><br></pre></td></tr></table></figure>
+<h2 id="辦github-pages"><a href="#辦github-pages" class="headerlink" title="辦github pages"></a>辦github pages</h2><p>照著教學做吧<br><a href="https://pages.github.com/" target="_blank" rel="noopener">教學網址</a></p>
+<h2 id="安裝-Hexo-環境"><a href="#安裝-Hexo-環境" class="headerlink" title="安裝 Hexo 環境"></a>安裝 Hexo 環境</h2><p>安裝需求(Windows)：</p>
+<ul>
+<li><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a></li>
+<li><a href="https://git-scm.com/" target="_blank" rel="noopener">git</a></li>
+</ul>
+<h2 id="安裝Hexo套件"><a href="#安裝Hexo套件" class="headerlink" title="安裝Hexo套件"></a>安裝Hexo套件</h2><p>打開terminal，輸入指令安裝hexo：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">invalid literal <span class="keyword">for</span> int() with base 10: <span class="string">'asd'</span></span><br></pre></td></tr></table></figure>
+<p>裝好之後初始化部落格：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt; //初始化資料夾，取你要的名字</span><br><span class="line"><span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save  //安裝 git 部署套件</span><br></pre></td></tr></table></figure>
 
-<p>使用<code>traceback</code>：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> traceback</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    int(<span class="string">"asd"</span>)</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">    traceback.print_exc(e)</span><br></pre></td></tr></table></figure>
+<h2 id="修改網站配置"><a href="#修改網站配置" class="headerlink" title="修改網站配置"></a>修改網站配置</h2><h3 id="基本資料"><a href="#基本資料" class="headerlink" title="基本資料"></a>基本資料</h3><p>修改的內容會呈現在網站中。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span>	<span class="string">網站標題</span></span><br><span class="line"><span class="attr">subtitle:</span>	<span class="string">網站副標題</span></span><br><span class="line"><span class="attr">description:</span>	<span class="string">網站描述</span></span><br><span class="line"><span class="attr">keywords:</span>	<span class="string">網站的關鍵詞。使用半角逗號</span> <span class="string">,</span> <span class="string">分隔多個關鍵詞。</span></span><br><span class="line"><span class="attr">author:</span>	<span class="string">你的名字</span></span><br><span class="line"><span class="attr">language:</span>	<span class="string">網站使用的語言</span></span><br><span class="line"><span class="attr">timezone:</span>	<span class="string">網站時區，Hexo</span> <span class="string">預設使用你電腦的時區。</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"d:\pyCharm\test\test.py"</span>, line 5, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    int(<span class="string">"asd"</span>)</span><br><span class="line">ValueError: invalid literal <span class="keyword">for</span> int() with base 10: <span class="string">'asd'</span></span><br><span class="line"></span><br><span class="line">During handling of the above exception, another exception occurred:</span><br><span class="line"></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"D:\python\lib\runpy.py"</span>, line 193, <span class="keyword">in</span> _run_module_as_main</span><br><span class="line">    <span class="string">"__main__"</span>, mod_spec)</span><br><span class="line">  File <span class="string">"D:\python\lib\runpy.py"</span>, line 85, <span class="keyword">in</span> _run_code</span><br><span class="line">    <span class="built_in">exec</span>(code, run_globals)</span><br><span class="line">  File <span class="string">"c:\Users\tsou\.vscode\extensions\ms-python.python-2020.5.86398\pythonFiles\lib\python\debugpy\wheels\debugpy\__main__.py"</span>, line 45, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    cli.main()</span><br><span class="line">  File <span class="string">"c:\Users\tsou\.vscode\extensions\ms-python.python-2020.5.86398\pythonFiles\lib\python\debugpy\wheels\debugpy/..\debugpy\server\cli.py"</span>, line 430, <span class="keyword">in</span> main</span><br><span class="line">    run()</span><br><span class="line">  File <span class="string">"c:\Users\tsou\.vscode\extensions\ms-python.python-2020.5.86398\pythonFiles\lib\python\debugpy\wheels\debugpy/..\debugpy\server\cli.py"</span>, line 267, <span class="keyword">in</span> run_file</span><br><span class="line">    runpy.run_path(options.target, run_name=compat.force_str(<span class="string">"__main__"</span>))</span><br><span class="line">  File <span class="string">"D:\python\lib\runpy.py"</span>, line 263, <span class="keyword">in</span> run_path</span><br><span class="line">    pkg_name=pkg_name, script_name=fname)</span><br><span class="line">  File <span class="string">"D:\python\lib\runpy.py"</span>, line 96, <span class="keyword">in</span> _run_module_code</span><br><span class="line">    mod_name, mod_spec, pkg_name, script_name)</span><br><span class="line">  File <span class="string">"D:\python\lib\runpy.py"</span>, line 85, <span class="keyword">in</span> _run_code</span><br><span class="line">    <span class="built_in">exec</span>(code, run_globals)</span><br><span class="line">  File <span class="string">"d:\pyCharm\test\test.py"</span>, line 7, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    traceback.print_exc(e)</span><br><span class="line">  File <span class="string">"D:\python\lib\traceback.py"</span>, line 163, <span class="keyword">in</span> print_exc</span><br><span class="line">    print_exception(*sys.exc_info(), <span class="built_in">limit</span>=<span class="built_in">limit</span>, file=file, chain=chain)</span><br><span class="line">  File <span class="string">"D:\python\lib\traceback.py"</span>, line 104, <span class="keyword">in</span> print_exception</span><br><span class="line">    <span class="built_in">type</span>(value), value, tb, <span class="built_in">limit</span>=<span class="built_in">limit</span>).format(chain=chain):</span><br><span class="line">  File <span class="string">"D:\python\lib\traceback.py"</span>, line 508, <span class="keyword">in</span> __init__</span><br><span class="line">    capture_locals=capture_locals)</span><br><span class="line">  File <span class="string">"D:\python\lib\traceback.py"</span>, line 337, <span class="keyword">in</span> extract</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">limit</span> &gt;= 0:</span><br><span class="line">TypeError: <span class="string">'&gt;='</span> not supported between instances of <span class="string">'ValueError'</span> and <span class="string">'int'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><figcaption><span>./_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">小奇毛的部落格</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">聽說寫部落格有益身心健康</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">''</span></span><br><span class="line"><span class="attr">keywords:</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">小奇毛</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-TW</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">''</span></span><br></pre></td></tr></table></figure>
 
-<p>可以很明確的知道哪個檔案的第幾行程式出問題。</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li><a href="https://docs.python.org/3/library/traceback.html" target="_blank" rel="noopener">traceback — Print or retrieve a stack traceback¶</a></li>
+<h3 id="網站連結"><a href="#網站連結" class="headerlink" title="網站連結"></a>網站連結</h3><p>將網址改成你的網站連結：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">url:</span> <span class="string">https://&lt;username&gt;.github.io/</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><figcaption><span>./_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://TsouMinHan.github.io/</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="佈署資訊"><a href="#佈署資訊" class="headerlink" title="佈署資訊"></a>佈署資訊</h3><p>設定部屬資訊：<br>因為hexo可以部屬在不同的平台，因此這邊的repo和branch要自己添加。<br>另外當時我在<code>:</code>後沒有空格會無法成功部屬，若有類似問題可以增加空白試試看。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">repo:</span> <span class="string">https://github.com/&lt;username&gt;/&lt;project&gt;</span></span><br><span class="line"><span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><figcaption><span>./_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/TsouMinHan/TsouMinHan.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<p>也可以用<code>hexo server</code>在本機先進行測試後再佈署</p>
+<h2 id="部屬到github"><a href="#部屬到github" class="headerlink" title="部屬到github"></a>部屬到github</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo cl  //清除之前建立的靜態檔案，也可以輸入 hexo clean</span><br><span class="line">hexo g  //建立靜態檔案，也可以輸入 hexo generate</span><br><span class="line">hexo d  //部署至 Github Pages，也可以輸入 hexo deploy</span><br></pre></td></tr></table></figure>
+<p>輸入<code>hexo d</code>會要求登入github。</p>
+<p>最後打開自己的網頁就可以看到結果了。<br>架好自己的網站之後就要把網站弄得票漂亮亮的，可以看下一篇文章。</p>
+<h2 id="參考來源"><a href="#參考來源" class="headerlink" title="參考來源"></a>參考來源</h2><ol>
+<li><a href="https://ed521.github.io/2019/07/hexo-install/" target="_blank" rel="noopener">[教學] 使用 GitHub Pages + Hexo 來架設個人部落格</a></li>
+<li><a href="https://medium.com/@bebebobohaha/%E4%BD%BF%E7%94%A8-hexo-gitpage-%E6%90%AD%E5%BB%BA%E5%80%8B%E4%BA%BA-blog-5c6ed52f23db" target="_blank" rel="noopener">如何搭建個人 Blog 使用 Hexo + Gitpage</a></li>
 </ol>
 
     </div>
@@ -283,7 +308,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>文章連結：</strong>
-    <a href="https://tsouminhan.github.io/2020/06/09/traceback-package/" title="traceback套件">https://tsouminhan.github.io/2020/06/09/traceback-package/</a>
+    <a href="https://tsouminhan.github.io/2020/04/16/hexo_deployment/" title="github pages + Hexo架設個人靜態部落格">https://tsouminhan.github.io/2020/04/16/hexo_deployment/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh_TW" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！
@@ -295,7 +320,7 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/python-package/" rel="tag"><i class="fa fa-tag"></i> python, package</a>
+              <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
           </div>
 
         
@@ -303,13 +328,10 @@
 
         
     <div class="post-nav">
+      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2020/06/05/VSCode-setting/" rel="prev" title="VSCode設定">
-      <i class="fa fa-chevron-left"></i> VSCode設定
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/07/11/vue/" rel="next" title="Vue 筆記">
-      Vue 筆記 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/04/17/hexo-setting-and-command/" rel="next" title="Hexo 相關設定和指令">
+      Hexo 相關設定和指令 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -376,7 +398,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#參考資料"><span class="nav-number">1.</span> <span class="nav-text">參考資料</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#辦github-pages"><span class="nav-number">1.</span> <span class="nav-text">辦github pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安裝-Hexo-環境"><span class="nav-number">2.</span> <span class="nav-text">安裝 Hexo 環境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安裝Hexo套件"><span class="nav-number">3.</span> <span class="nav-text">安裝Hexo套件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改網站配置"><span class="nav-number">4.</span> <span class="nav-text">修改網站配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本資料"><span class="nav-number">4.1.</span> <span class="nav-text">基本資料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#網站連結"><span class="nav-number">4.2.</span> <span class="nav-text">網站連結</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#佈署資訊"><span class="nav-number">4.3.</span> <span class="nav-text">佈署資訊</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部屬到github"><span class="nav-number">5.</span> <span class="nav-text">部屬到github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#參考來源"><span class="nav-number">6.</span> <span class="nav-text">參考來源</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -544,9 +566,9 @@
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://tsouminhan.github.io/2020/06/09/traceback-package/";
-    this.page.identifier = "2020/06/09/traceback-package/";
-    this.page.title = "traceback套件";
+    this.page.url = "https://tsouminhan.github.io/2020/04/16/hexo_deployment/";
+    this.page.identifier = "2020/04/16/hexo_deployment/";
+    this.page.title = "github pages + Hexo架設個人靜態部落格";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {

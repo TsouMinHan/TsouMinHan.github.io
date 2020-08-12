@@ -231,7 +231,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">文章字數：</span>
-              <span>442</span>
+              <span>617</span>
             </span>
             <span class="post-meta-item" title="所需閱讀時間">
               <span class="post-meta-item-icon">
@@ -256,6 +256,8 @@
 <h2 id="判斷變數型態"><a href="#判斷變數型態" class="headerlink" title="判斷變數型態"></a>判斷變數型態</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># isinstance(value, type)</span></span><br><span class="line">isinstance(<span class="number">5</span>, int) <span class="comment"># True</span></span><br><span class="line"><span class="comment"># 也可以判斷其他資料型態。</span></span><br></pre></td></tr></table></figure>
 <p>我也看到<code>math</code>套件下有個方法是用來判斷是不是有限數的。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line">a = <span class="number">6</span></span><br><span class="line">b = <span class="number">7.54</span></span><br><span class="line">c = <span class="number">8</span>+<span class="number">0.54</span></span><br><span class="line">d = <span class="number">0</span>*<span class="number">4</span></span><br><span class="line">e = float(<span class="string">"inf"</span>)</span><br><span class="line">f = float(<span class="string">"NaN"</span>)</span><br><span class="line"></span><br><span class="line">print(math.isfinite(a)) <span class="comment"># True</span></span><br><span class="line">print(math.isfinite(b)) <span class="comment"># True</span></span><br><span class="line">print(math.isfinite(c)) <span class="comment"># True</span></span><br><span class="line">print(math.isfinite(d)) <span class="comment"># True</span></span><br><span class="line">print(math.isfinite(e)) <span class="comment"># False</span></span><br><span class="line">print(math.isfinite(f)) <span class="comment"># False</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="json-讀-寫檔案"><a href="#json-讀-寫檔案" class="headerlink" title="json 讀/寫檔案"></a>json 讀/寫檔案</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 讀檔案</span></span><br><span class="line"><span class="keyword">with</span> open(path, <span class="string">'r'</span>, encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> json_file:</span><br><span class="line">    data = json.load(json_file)</span><br><span class="line"><span class="comment"># 寫檔案</span></span><br><span class="line"><span class="keyword">with</span> open(path, <span class="string">'w'</span>, encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> json_file:</span><br><span class="line">    json.dump(&#123;&#125;, json_file)</span><br></pre></td></tr></table></figure>
 
 <h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
 <li><a href="https://morioh.com/p/029d0f069ce9" target="_blank" rel="noopener">Introduction Python isfinite() Method with Examples</a></li>
@@ -368,7 +370,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#判斷變數型態"><span class="nav-number">1.</span> <span class="nav-text">判斷變數型態</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#參考資料"><span class="nav-number">2.</span> <span class="nav-text">參考資料</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#判斷變數型態"><span class="nav-number">1.</span> <span class="nav-text">判斷變數型態</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#json-讀-寫檔案"><span class="nav-number">2.</span> <span class="nav-text">json 讀&#x2F;寫檔案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#參考資料"><span class="nav-number">3.</span> <span class="nav-text">參考資料</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -384,7 +386,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -397,7 +399,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -442,13 +444,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">總字數：</span>
-    <span title="總字數">15k</span>
+    <span title="總字數">16k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
-    <span title="所需總閱讀時間">14 分鐘</span>
+    <span title="所需總閱讀時間">15 分鐘</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
   </div>
