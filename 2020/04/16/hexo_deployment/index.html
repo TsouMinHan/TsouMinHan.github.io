@@ -282,7 +282,7 @@
 <h2 id="佈署到github"><a href="#佈署到github" class="headerlink" title="佈署到github"></a>佈署到github</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo cl  //清除之前建立的靜態檔案，也可以輸入 hexo clean</span><br><span class="line">hexo g  //建立靜態檔案，也可以輸入 hexo generate</span><br><span class="line">hexo d  //佈署至 Github Pages，也可以輸入 hexo deploy</span><br></pre></td></tr></table></figure>
 <p>輸入<code>hexo d</code>會要求登入github。</p>
 <p>每次佈署都要手動打開終端機輸入指令滿麻煩的，所以寫了個<code>bat</code>檔案，往後只要執行該檔案就可以自動佈署了，方便許多。</p>
-<figure class="highlight bash"><figcaption><span>deployBlog.bat</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cmd /k <span class="string">"cd C:\&lt;your blog directory&gt; &amp;&amp; hexo g &amp;&amp; hexo d"</span></span><br><span class="line">PAUSE</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><figcaption><span>deployBlog.bat</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmd /c <span class="string">"cd C:\&lt;your blog directory&gt; &amp;&amp; hexo g &amp;&amp; hexo d"</span></span><br></pre></td></tr></table></figure>
 
 
 <p>最後打開自己的網頁就可以看到結果了。<br>架好自己的網站之後就要把網站弄得漂漂亮亮的，可以看下一篇文章<a href="/2020/04/17/hexo-setting-and-command/" title="&lt;&lt;Hexo 相關設定和指令&gt;&gt;">&lt;&lt;Hexo 相關設定和指令&gt;&gt;</a>。</p>
