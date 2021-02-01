@@ -23,7 +23,7 @@
   <meta name="description" content="python有很多指令都很方便使用，但也不是每次都會記起來那些指令怎麼使用，因此在這邊記錄下來。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python 好用卻常忘記的指令">
-<meta property="og:url" content="https://tsouminhan.github.io/2020/04/23/python-tips/index.html">
+<meta property="og:url" content="https://tsouminhan.github.io/2020/04/23/python/python-tips/index.html">
 <meta property="og:site_name" content="小奇毛的部落格">
 <meta property="og:description" content="python有很多指令都很方便使用，但也不是每次都會記起來那些指令怎麼使用，因此在這邊記錄下來。">
 <meta property="og:locale" content="zh_TW">
@@ -33,7 +33,7 @@
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://tsouminhan.github.io/2020/04/23/python-tips/">
+<link rel="canonical" href="https://tsouminhan.github.io/2020/04/23/python/python-tips/">
 
 
 <script id="page-configurations">
@@ -169,7 +169,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://tsouminhan.github.io/2020/04/23/python-tips/">
+    <link itemprop="mainEntityOfPage" href="https://tsouminhan.github.io/2020/04/23/python/python-tips/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head_photo.JPG">
@@ -213,8 +213,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2020/04/23/python-tips/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/04/23/python-tips/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2020/04/23/python/python-tips/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/04/23/python/python-tips/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -260,7 +260,7 @@
 
 <h2 id="sqlite3"><a href="#sqlite3" class="headerlink" title="sqlite3"></a>sqlite3</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DBHandler</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.db_name = <span class="string">f"<span class="subst">&#123;database_path&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__enter__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.start_database()</span><br><span class="line">        <span class="keyword">return</span> self</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__exit__</span><span class="params">(self, exc_type, ex_value, ex_traceback)</span>:</span></span><br><span class="line">        self.close_database()</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">start_database</span><span class="params">(self,)</span>:</span></span><br><span class="line">        self.conn = sqlite3.connect(self.db_name)</span><br><span class="line">        self.cur = self.conn.cursor()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">close_database</span><span class="params">(self,)</span>:</span></span><br><span class="line">        <span class="string">"""shut down connect to DB</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        self.conn.close()</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MainDB</span>:</span>  </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.db = DBHandler()</span><br><span class="line">        self.table_name = <span class="string">"job"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">create_table</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">with</span> self.db:</span><br><span class="line">            sql = <span class="string">f"""</span></span><br><span class="line"><span class="string">                CREATE TABLE IF NOT EXISTS <span class="subst">&#123;self.table_name&#125;</span> (</span></span><br><span class="line"><span class="string">                id integer PRIMARY KEY</span></span><br><span class="line"><span class="string">                );</span></span><br><span class="line"><span class="string">                """</span></span><br><span class="line">            </span><br><span class="line">            self.db.cur.execute(sql)</span><br></pre></td></tr></table></figure>
 
-<h2 id="RE"><a href="#RE" class="headerlink" title="RE"></a>RE</h2><a href="/2020/10/01/python-regular-expression/" title="RE">RE</a>
+<h2 id="RE"><a href="#RE" class="headerlink" title="RE"></a>RE</h2>
 
 <h2 id="顯示變數名稱與值"><a href="#顯示變數名稱與值" class="headerlink" title="顯示變數名稱與值"></a>顯示變數名稱與值</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">debug</span><span class="params">(variable)</span>:</span></span><br><span class="line">    <span class="comment"># 若用locals()，只會顯示 variable = ...</span></span><br><span class="line">    <span class="keyword">print</span> ([ k <span class="keyword">for</span> k,v <span class="keyword">in</span> globals().items() <span class="keyword">if</span> v == variable][<span class="number">0</span>], <span class="string">'='</span>, variable)</span><br></pre></td></tr></table></figure>
 
@@ -283,7 +283,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>文章連結：</strong>
-    <a href="https://tsouminhan.github.io/2020/04/23/python-tips/" title="python 好用卻常忘記的指令">https://tsouminhan.github.io/2020/04/23/python-tips/</a>
+    <a href="https://tsouminhan.github.io/2020/04/23/python/python-tips/" title="python 好用卻常忘記的指令">https://tsouminhan.github.io/2020/04/23/python/python-tips/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh_TW" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！
@@ -304,11 +304,11 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/04/21/Selenium/" rel="prev" title="Selenium 相關操作">
+    <a href="/2020/04/21/python/Selenium/" rel="prev" title="Selenium 相關操作">
       <i class="fa fa-chevron-left"></i> Selenium 相關操作
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/05/13/firebase-cloud-firestore/" rel="next" title="firebase-cloud-firestore 新增刪除修改（CRUD）">
+    <a href="/2020/05/13/python/firebase-cloud-firestore/" rel="next" title="firebase-cloud-firestore 新增刪除修改（CRUD）">
       firebase-cloud-firestore 新增刪除修改（CRUD） <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -392,20 +392,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -439,8 +439,8 @@
 
 <div class="copyright">
   
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -450,13 +450,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">總字數：</span>
-    <span title="總字數">21k</span>
+    <span title="總字數">23k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
-    <span title="所需總閱讀時間">19 分鐘</span>
+    <span title="所需總閱讀時間">21 分鐘</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
   </div>
@@ -524,8 +524,8 @@
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://tsouminhan.github.io/2020/04/23/python-tips/";
-    this.page.identifier = "2020/04/23/python-tips/";
+    this.page.url = "https://tsouminhan.github.io/2020/04/23/python/python-tips/";
+    this.page.identifier = "2020/04/23/python/python-tips/";
     this.page.title = "python 好用卻常忘記的指令";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
