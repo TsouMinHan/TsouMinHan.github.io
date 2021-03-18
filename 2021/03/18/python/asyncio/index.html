@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"tsouminhan.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="記錄一下traceback套件的指令，會顯示詳細的錯誤訊息，在debug時很方便，有許多的指令，但我看不太懂介紹，測試幾個指令之後覺得就只是顯示錯誤的訊息數量跟形式不太一樣，所以我就只記下我覺得好用的指令，其實也就一個而已，但是要用的時候總是會忘記。">
+  <meta name="description" content="紀錄一下自己在使用 asyncio 的程式碼，下次要用時可以直接複製過去修改。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="traceback套件">
-<meta property="og:url" content="https://tsouminhan.github.io/2020/06/09/python/traceback-package/index.html">
+<meta property="og:title" content="asyncio">
+<meta property="og:url" content="https://tsouminhan.github.io/2021/03/18/python/asyncio/index.html">
 <meta property="og:site_name" content="小奇毛的部落格">
-<meta property="og:description" content="記錄一下traceback套件的指令，會顯示詳細的錯誤訊息，在debug時很方便，有許多的指令，但我看不太懂介紹，測試幾個指令之後覺得就只是顯示錯誤的訊息數量跟形式不太一樣，所以我就只記下我覺得好用的指令，其實也就一個而已，但是要用的時候總是會忘記。">
+<meta property="og:description" content="紀錄一下自己在使用 asyncio 的程式碼，下次要用時可以直接複製過去修改。">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2020-06-09T11:08:56.000Z">
-<meta property="article:modified_time" content="2020-06-09T11:08:56.000Z">
+<meta property="article:published_time" content="2021-03-18T13:26:15.000Z">
+<meta property="article:modified_time" content="2021-03-18T13:26:15.000Z">
 <meta property="article:author" content="小奇毛">
-<meta property="article:tag" content="python, package">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://tsouminhan.github.io/2020/06/09/python/traceback-package/">
+<link rel="canonical" href="https://tsouminhan.github.io/2021/03/18/python/asyncio/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>traceback套件 | 小奇毛的部落格</title>
+  <title>asyncio | 小奇毛的部落格</title>
   
 
 
@@ -169,7 +169,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://tsouminhan.github.io/2020/06/09/python/traceback-package/">
+    <link itemprop="mainEntityOfPage" href="https://tsouminhan.github.io/2021/03/18/python/asyncio/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head_photo.JPG">
@@ -182,7 +182,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          traceback套件
+          asyncio
         </h1>
 
         <div class="post-meta">
@@ -192,7 +192,7 @@
               </span>
               <span class="post-meta-item-text">發表於</span>
 
-              <time title="創建時間：2020-06-09 19:08:56" itemprop="dateCreated datePublished" datetime="2020-06-09T19:08:56+08:00">2020-06-09</time>
+              <time title="創建時間：2021-03-18 21:26:15" itemprop="dateCreated datePublished" datetime="2021-03-18T21:26:15+08:00">2021-03-18</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -213,8 +213,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2020/06/09/python/traceback-package/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/06/09/python/traceback-package/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2021/03/18/python/asyncio/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/03/18/python/asyncio/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -224,14 +224,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">文章字數：</span>
-              <span>2.1k</span>
+              <span>863</span>
             </span>
             <span class="post-meta-item" title="所需閱讀時間">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-              <span>2 分鐘</span>
+              <span>1 分鐘</span>
             </span>
 
         </div>
@@ -243,24 +243,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>記錄一下<code>traceback</code>套件的指令，會顯示詳細的錯誤訊息，在debug時很方便，有許多的指令，但我看不太懂介紹，測試幾個指令之後覺得就只是顯示錯誤的訊息數量跟形式不太一樣，所以我就只記下我覺得好用的指令，其實也就一個而已，但是要用的時候總是會忘記。</p>
+        <p>紀錄一下自己在使用 <code>asyncio</code> 的程式碼，下次要用時可以直接複製過去修改。</p>
 <a id="more"></a>
 
-<p>在<code>try/except</code>時使用起來很方便。</p>
-<p>正常情況下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    int(<span class="string">"asd"</span>)</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">    print(e)</span><br></pre></td></tr></table></figure>
+<h2 id="同步執行"><a href="#同步執行" class="headerlink" title="同步執行"></a>同步執行</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> asyncio</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">some_function</span><span class="params">(s)</span>:</span> </span><br><span class="line">    <span class="keyword">await</span> time.sleep(<span class="number">3</span>)</span><br><span class="line">    print(s)</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">acync_thread</span><span class="params">(s, q)</span>:</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        page = <span class="keyword">await</span> q.get()</span><br><span class="line">        <span class="keyword">await</span> some_function(s)</span><br><span class="line">        q.task_done()</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">put_to_queue</span><span class="params">(q, page)</span>:</span></span><br><span class="line">    <span class="keyword">await</span> q.put(page)</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">start_async</span><span class="params">(pages)</span>:</span></span><br><span class="line">    q = asyncio.Queue(maxsize=<span class="number">2</span>)</span><br><span class="line">    </span><br><span class="line">    producers = [asyncio.create_task(put_to_queue(q, page)) <span class="keyword">for</span> page <span class="keyword">in</span> range(<span class="number">1</span>, pages)]</span><br><span class="line">    consumers = [asyncio.create_task(acync_thread(<span class="string">"str"</span>, q)) <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">1</span>, pages)]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">await</span> asyncio.gather(*producers)</span><br><span class="line">    <span class="keyword">await</span> q.join()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> c <span class="keyword">in</span> consumers:</span><br><span class="line">        c.cancel()</span><br><span class="line"></span><br><span class="line">asyncio.run(start_async(pages))</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">invalid literal <span class="keyword">for</span> int() with base 10: <span class="string">"asd"</span></span><br></pre></td></tr></table></figure>
-
-<p>使用<code>traceback</code>：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> traceback</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    int(<span class="string">"asd"</span>)</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">    traceback.print_exc(e)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"d:\pyCharm\test\test.py"</span>, line 5, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    int(<span class="string">"asd"</span>)</span><br><span class="line">ValueError: invalid literal <span class="keyword">for</span> int() with base 10: <span class="string">"asd"</span></span><br><span class="line"></span><br><span class="line">During handling of the above exception, another exception occurred:</span><br><span class="line"></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"D:\python\lib\runpy.py"</span>, line 193, <span class="keyword">in</span> _run_module_as_main</span><br><span class="line">    <span class="string">"__main__"</span>, mod_spec)</span><br><span class="line">  File <span class="string">"D:\python\lib\runpy.py"</span>, line 85, <span class="keyword">in</span> _run_code</span><br><span class="line">    <span class="built_in">exec</span>(code, run_globals)</span><br><span class="line">  File <span class="string">"c:\Users\tsou\.vscode\extensions\ms-python.python-2020.5.86398\pythonFiles\lib\python\debugpy\wheels\debugpy\__main__.py"</span>, line 45, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    cli.main()</span><br><span class="line">  File <span class="string">"c:\Users\tsou\.vscode\extensions\ms-python.python-2020.5.86398\pythonFiles\lib\python\debugpy\wheels\debugpy/..\debugpy\server\cli.py"</span>, line 430, <span class="keyword">in</span> main</span><br><span class="line">    run()</span><br><span class="line">  File <span class="string">"c:\Users\tsou\.vscode\extensions\ms-python.python-2020.5.86398\pythonFiles\lib\python\debugpy\wheels\debugpy/..\debugpy\server\cli.py"</span>, line 267, <span class="keyword">in</span> run_file</span><br><span class="line">    runpy.run_path(options.target, run_name=compat.force_str(<span class="string">"__main__"</span>))</span><br><span class="line">  File <span class="string">"D:\python\lib\runpy.py"</span>, line 263, <span class="keyword">in</span> run_path</span><br><span class="line">    pkg_name=pkg_name, script_name=fname)</span><br><span class="line">  File <span class="string">"D:\python\lib\runpy.py"</span>, line 96, <span class="keyword">in</span> _run_module_code</span><br><span class="line">    mod_name, mod_spec, pkg_name, script_name)</span><br><span class="line">  File <span class="string">"D:\python\lib\runpy.py"</span>, line 85, <span class="keyword">in</span> _run_code</span><br><span class="line">    <span class="built_in">exec</span>(code, run_globals)</span><br><span class="line">  File <span class="string">"d:\pyCharm\test\test.py"</span>, line 7, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    traceback.print_exc(e)</span><br><span class="line">  File <span class="string">"D:\python\lib\traceback.py"</span>, line 163, <span class="keyword">in</span> print_exc</span><br><span class="line">    print_exception(*sys.exc_info(), <span class="built_in">limit</span>=<span class="built_in">limit</span>, file=file, chain=chain)</span><br><span class="line">  File <span class="string">"D:\python\lib\traceback.py"</span>, line 104, <span class="keyword">in</span> print_exception</span><br><span class="line">    <span class="built_in">type</span>(value), value, tb, <span class="built_in">limit</span>=<span class="built_in">limit</span>).format(chain=chain):</span><br><span class="line">  File <span class="string">"D:\python\lib\traceback.py"</span>, line 508, <span class="keyword">in</span> __init__</span><br><span class="line">    capture_locals=capture_locals)</span><br><span class="line">  File <span class="string">"D:\python\lib\traceback.py"</span>, line 337, <span class="keyword">in</span> extract</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">limit</span> &gt;= 0:</span><br><span class="line">TypeError: <span class="string">"&gt;="</span> not supported between instances of <span class="string">"ValueError"</span> and <span class="string">"int"</span></span><br></pre></td></tr></table></figure>
-
-<p>可以很明確的知道哪個檔案的第幾行程式出問題。</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li><a href="https://docs.python.org/3/library/traceback.html" target="_blank" rel="noopener">traceback — Print or retrieve a stack traceback¶</a></li>
-</ol>
+<h2 id="同步下載圖片"><a href="#同步下載圖片" class="headerlink" title="同步下載圖片"></a>同步下載圖片</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> aiohttp, aiofiles</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">with</span> aiohttp.ClientSession() <span class="keyword">as</span> session:</span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">with</span> session.get(download_url) <span class="keyword">as</span> resp:        </span><br><span class="line">        <span class="keyword">if</span> resp.status == <span class="number">200</span>:</span><br><span class="line">            f = <span class="keyword">await</span> aiofiles.open(<span class="string">'&#123;&#125;/&#123;&#125;.jpg'</span>.format(path, page), mode=<span class="string">'wb'</span>)</span><br><span class="line">            <span class="keyword">await</span> f.write(<span class="keyword">await</span> resp.read())</span><br><span class="line">            <span class="keyword">await</span> f.close()</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -276,7 +264,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>文章連結：</strong>
-    <a href="https://tsouminhan.github.io/2020/06/09/python/traceback-package/" title="traceback套件">https://tsouminhan.github.io/2020/06/09/python/traceback-package/</a>
+    <a href="https://tsouminhan.github.io/2021/03/18/python/asyncio/" title="asyncio">https://tsouminhan.github.io/2021/03/18/python/asyncio/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh_TW" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！
@@ -288,7 +276,7 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/python-package/" rel="tag"><i class="fa fa-tag"></i> python, package</a>
+              <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
           </div>
 
         
@@ -297,12 +285,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/06/05/another/VSCode-setting/" rel="prev" title="VSCode設定">
-      <i class="fa fa-chevron-left"></i> VSCode設定
+    <a href="/2021/01/29/another/soft-skills/" rel="prev" title="Soft Skills 軟實力｜軟體開發人員的生存手冊">
+      <i class="fa fa-chevron-left"></i> Soft Skills 軟實力｜軟體開發人員的生存手冊
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/07/11/vue/vue/" rel="next" title="Vue 筆記">
-      Vue 筆記 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/03/18/python/sqlite/" rel="next" title="sqlite">
+      sqlite <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -369,7 +357,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#參考資料"><span class="nav-number">1.</span> <span class="nav-text">參考資料</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#同步執行"><span class="nav-number">1.</span> <span class="nav-text">同步執行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#同步下載圖片"><span class="nav-number">2.</span> <span class="nav-text">同步下載圖片</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -517,9 +505,9 @@
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://tsouminhan.github.io/2020/06/09/python/traceback-package/";
-    this.page.identifier = "2020/06/09/python/traceback-package/";
-    this.page.title = "traceback套件";
+    this.page.url = "https://tsouminhan.github.io/2021/03/18/python/asyncio/";
+    this.page.identifier = "2021/03/18/python/asyncio/";
+    this.page.title = "asyncio";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
