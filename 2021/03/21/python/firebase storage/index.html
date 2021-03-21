@@ -22,17 +22,19 @@
 
   <meta name="description" content="上傳圖片12345678910111213141516from google.cloud import storagefrom firebase import firebaseimport osos.environ[&quot;GOOGLE_APPLICATION_CREDENTIALS&quot;]&#x3D;&quot;&lt;add your credentials path&gt;&quot;firebase &#x3D; firebase.Fir">
 <meta property="og:type" content="article">
-<meta property="og:title" content="storage">
-<meta property="og:url" content="https://tsouminhan.github.io/2021/03/21/firebase%20storage/index.html">
+<meta property="og:title" content="Python - 上傳圖片至 Firebase Stroage">
+<meta property="og:url" content="https://tsouminhan.github.io/2021/03/21/python/firebase%20storage/index.html">
 <meta property="og:site_name" content="小奇毛的部落格">
 <meta property="og:description" content="上傳圖片12345678910111213141516from google.cloud import storagefrom firebase import firebaseimport osos.environ[&quot;GOOGLE_APPLICATION_CREDENTIALS&quot;]&#x3D;&quot;&lt;add your credentials path&gt;&quot;firebase &#x3D; firebase.Fir">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-03-21T08:18:27.000Z">
-<meta property="article:modified_time" content="2021-03-21T08:31:47.400Z">
+<meta property="article:modified_time" content="2021-03-18T13:26:15.000Z">
 <meta property="article:author" content="小奇毛">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Firebase">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://tsouminhan.github.io/2021/03/21/firebase%20storage/">
+<link rel="canonical" href="https://tsouminhan.github.io/2021/03/21/python/firebase%20storage/">
 
 
 <script id="page-configurations">
@@ -45,7 +47,7 @@
   };
 </script>
 
-  <title>storage | 小奇毛的部落格</title>
+  <title>Python - 上傳圖片至 Firebase Stroage | 小奇毛的部落格</title>
   
 
 
@@ -168,7 +170,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://tsouminhan.github.io/2021/03/21/firebase%20storage/">
+    <link itemprop="mainEntityOfPage" href="https://tsouminhan.github.io/2021/03/21/python/firebase%20storage/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head_photo.JPG">
@@ -181,7 +183,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          storage
+          Python - 上傳圖片至 Firebase Stroage
         </h1>
 
         <div class="post-meta">
@@ -190,9 +192,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2021-03-21 16:18:27 / 修改時間：16:31:47" itemprop="dateCreated datePublished" datetime="2021-03-21T16:18:27+08:00">2021-03-21</time>
+              <time title="創建時間：2021-03-21 16:18:27" itemprop="dateCreated datePublished" datetime="2021-03-21T16:18:27+08:00">2021-03-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2021-03-18 21:26:15" itemprop="dateModified" datetime="2021-03-18T21:26:15+08:00">2021-03-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+                </span>
             </span>
 
           
@@ -204,8 +221,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2021/03/21/firebase%20storage/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/03/21/firebase storage/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2021/03/21/python/firebase%20storage/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/03/21/python/firebase storage/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -258,7 +275,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>文章連結：</strong>
-    <a href="https://tsouminhan.github.io/2021/03/21/firebase%20storage/" title="storage">https://tsouminhan.github.io/2021/03/21/firebase storage/</a>
+    <a href="https://tsouminhan.github.io/2021/03/21/python/firebase%20storage/" title="Python - 上傳圖片至 Firebase Stroage">https://tsouminhan.github.io/2021/03/21/python/firebase storage/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh_TW" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！
@@ -268,6 +285,11 @@
 
 
       <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+              <a href="/tags/Firebase/" rel="tag"><i class="fa fa-tag"></i> Firebase</a>
+          </div>
 
         
 
@@ -275,8 +297,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/03/21/Java/java-swing/" rel="prev" title="java-swing">
-      <i class="fa fa-chevron-left"></i> java-swing
+    <a href="/2021/03/21/Java/java-swing/" rel="prev" title="Java - Swing">
+      <i class="fa fa-chevron-left"></i> Java - Swing
     </a></div>
       <div class="post-nav-item"></div>
     </div>
@@ -367,13 +389,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -492,9 +514,9 @@
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://tsouminhan.github.io/2021/03/21/firebase%20storage/";
-    this.page.identifier = "2021/03/21/firebase storage/";
-    this.page.title = "storage";
+    this.page.url = "https://tsouminhan.github.io/2021/03/21/python/firebase%20storage/";
+    this.page.identifier = "2021/03/21/python/firebase storage/";
+    this.page.title = "Python - 上傳圖片至 Firebase Stroage";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
