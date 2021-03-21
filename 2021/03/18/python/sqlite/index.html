@@ -20,17 +20,17 @@
     var CONFIG = {"hostname":"tsouminhan.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="紀錄自己在使用 sqlite 的程式碼片段，基本上一個專案只會打一次，所以常常忘記。">
+  <meta name="description" content="紀錄自己在使用 SQLite 的程式碼片段，基本上一個專案只會打一次，所以常常忘記。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python - sqlite 設定資料庫">
+<meta property="og:title" content="Python - sqlite 設定資料庫">
 <meta property="og:url" content="https://tsouminhan.github.io/2021/03/18/python/sqlite/index.html">
 <meta property="og:site_name" content="小奇毛的部落格">
-<meta property="og:description" content="紀錄自己在使用 sqlite 的程式碼片段，基本上一個專案只會打一次，所以常常忘記。">
+<meta property="og:description" content="紀錄自己在使用 SQLite 的程式碼片段，基本上一個專案只會打一次，所以常常忘記。">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-03-18T13:28:26.000Z">
 <meta property="article:modified_time" content="2021-03-18T13:28:26.000Z">
 <meta property="article:author" content="小奇毛">
-<meta property="article:tag" content="python">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://tsouminhan.github.io/2021/03/18/python/sqlite/">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>python - sqlite 設定資料庫 | 小奇毛的部落格</title>
+  <title>Python - sqlite 設定資料庫 | 小奇毛的部落格</title>
   
 
 
@@ -182,7 +182,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          python - sqlite 設定資料庫
+          Python - sqlite 設定資料庫
         </h1>
 
         <div class="post-meta">
@@ -200,7 +200,7 @@
               </span>
               <span class="post-meta-item-text">分類於</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                  <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
                 </span>
             </span>
 
@@ -224,14 +224,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">文章字數：</span>
-              <span>700</span>
+              <span>1.9k</span>
             </span>
             <span class="post-meta-item" title="所需閱讀時間">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-              <span>1 分鐘</span>
+              <span>2 分鐘</span>
             </span>
 
         </div>
@@ -243,10 +243,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>紀錄自己在使用 <code>sqlite</code> 的程式碼片段，基本上一個專案只會打一次，所以常常忘記。</p>
+        <p>紀錄自己在使用 <strong>SQLite</strong> 的程式碼片段，基本上一個專案只會打一次，所以常常忘記。</p>
 <a id="more"></a>
 
-<h2 id="sqlite3"><a href="#sqlite3" class="headerlink" title="sqlite3"></a>sqlite3</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sqlite3</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DBHandler</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.db_name = <span class="string">f"<span class="subst">&#123;database_path&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__enter__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.start_database()</span><br><span class="line">        <span class="keyword">return</span> self</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__exit__</span><span class="params">(self, exc_type, ex_value, ex_traceback)</span>:</span></span><br><span class="line">        self.close_database()</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">start_database</span><span class="params">(self,)</span>:</span></span><br><span class="line">        self.conn = sqlite3.connect(self.db_name)</span><br><span class="line">        self.cur = self.conn.cursor()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">close_database</span><span class="params">(self,)</span>:</span></span><br><span class="line">        <span class="string">"""shut down connect to DB</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        self.conn.close()</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MainDB</span>:</span>  </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.db = DBHandler()</span><br><span class="line">        self.table_name = <span class="string">"table_name"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">create_table</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">with</span> self.db:</span><br><span class="line">            sql = <span class="string">f"""</span></span><br><span class="line"><span class="string">                    CREATE TABLE IF NOT EXISTS <span class="subst">&#123;self.table_name&#125;</span> (</span></span><br><span class="line"><span class="string">                    id integer PRIMARY KEY</span></span><br><span class="line"><span class="string">                );</span></span><br><span class="line"><span class="string">                """</span></span><br><span class="line">            </span><br><span class="line">            self.db.cur.execute(sql)</span><br></pre></td></tr></table></figure>
+<p>我記得以 <code>with</code> 的方式進行資料庫操作是在某本書看到的，但忘記書名是什麼了…<br>是利用 Python <code>with</code> 的特性省略每次要<strong>連線</strong>資料庫與<strong>關閉</strong>的程式碼。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> class_name: <span class="comment"># 會先執行 class `__enter__ ` 這個 magic method</span></span><br><span class="line">    ...</span><br><span class="line"></span><br><span class="line"><span class="comment"># 離開區塊時會執行 `__exit__`</span></span><br></pre></td></tr></table></figure>
+
+<p>因此利用這個特性，將<strong>連線</strong>資料庫的程式碼寫在 <code>__enter__</code> 內，<strong>關閉</strong>資料庫的部份則是寫在 <code>__exit__</code> 內，可以確保每次都會確實關閉資料庫。</p>
+<h2 id="sqlite3"><a href="#sqlite3" class="headerlink" title="sqlite3"></a>sqlite3</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sqlite3</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DBHandler</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.db_name = <span class="string">f"<span class="subst">&#123;database_path&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__enter__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.start_database()</span><br><span class="line">        <span class="keyword">return</span> self</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__exit__</span><span class="params">(self, exc_type, ex_value, ex_traceback)</span>:</span></span><br><span class="line">        self.close_database()</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">start_database</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.conn = sqlite3.connect(self.db_name)</span><br><span class="line">        self.cur = self.conn.cursor()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">close_database</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""shut down connect to DB</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        self.conn.close()</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MainDB</span><span class="params">(object)</span>:</span>  </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.db = DBHandler()</span><br><span class="line">        self.table_name = <span class="string">"table_name"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_execute</span><span class="params">(self, sql)</span>:</span></span><br><span class="line">        <span class="keyword">with</span> self.db:</span><br><span class="line"></span><br><span class="line">            self.db.cur.execute(sql)</span><br><span class="line">            self.db.conn.commit()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_fetch</span><span class="params">(self, sql)</span>:</span></span><br><span class="line">        <span class="keyword">with</span> self.db:</span><br><span class="line">            self.db.cur.execute(sql)</span><br><span class="line">            rows = self.db.cur.fetchall()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> rows</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">create_table</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">with</span> self.db:</span><br><span class="line">            sql = <span class="string">f"""</span></span><br><span class="line"><span class="string">                    CREATE TABLE IF NOT EXISTS <span class="subst">&#123;self.table_name&#125;</span> (</span></span><br><span class="line"><span class="string">                    id integer PRIMARY KEY,</span></span><br><span class="line"><span class="string">                    name string(8) NOT NULL,</span></span><br><span class="line"><span class="string">                    datetime datetime DEFAULT (datetime('now', 'localtime')), /*(Date())*/</span></span><br><span class="line"><span class="string">                    number integer DEFAULT 0,</span></span><br><span class="line"><span class="string">                    execution BOOLEAN NOT NULL DEFAULT 0</span></span><br><span class="line"><span class="string">                    </span></span><br><span class="line"><span class="string">                );</span></span><br><span class="line"><span class="string">                """</span></span><br><span class="line">            </span><br><span class="line">            self.db.cur.execute(sql)</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">read</span><span class="params">(self)</span>:</span></span><br><span class="line">        sql = <span class="string">f"""</span></span><br><span class="line"><span class="string">            SELECT * FROM <span class="subst">&#123;self.table_name&#125;</span></span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line"></span><br><span class="line">        sql = <span class="string">f"""</span></span><br><span class="line"><span class="string">            SELECT name FROM <span class="subst">&#123;self.table_name&#125;</span></span></span><br><span class="line"><span class="string">            WHERE id='5'</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> self._fetch(sql)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">insert</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        sql = <span class="string">f"""</span></span><br><span class="line"><span class="string">                INSERT INTO <span class="subst">&#123;self.table_name&#125;</span> (name) </span></span><br><span class="line"><span class="string">                VALUES ('<span class="subst">&#123;name&#125;</span>')</span></span><br><span class="line"><span class="string">            """</span></span><br><span class="line">        self._execute(sql)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">update</span><span class="params">(self, name, number)</span>:</span></span><br><span class="line">        sql = <span class="string">f"""</span></span><br><span class="line"><span class="string">            UPDATE <span class="subst">&#123;self.table_name&#125;</span></span></span><br><span class="line"><span class="string">            SET name='<span class="subst">&#123;name&#125;</span>', number='<span class="subst">&#123;number&#125;</span>'</span></span><br><span class="line"><span class="string">            WHERE id='5';</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line"></span><br><span class="line">        self._execute(sql)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">delete</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        sql = <span class="string">f"""</span></span><br><span class="line"><span class="string">                DELETE FROM <span class="subst">&#123;self.table_name&#125;</span></span></span><br><span class="line"><span class="string">                WHERE name='<span class="subst">&#123;name&#125;</span>'</span></span><br><span class="line"><span class="string">            """</span></span><br><span class="line">        self._execute(sql)</span><br></pre></td></tr></table></figure>
+
+<p><code>SELECT changes()</code> 可以知道資料庫做了多少變動。</p>
 
     </div>
 
@@ -262,7 +268,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>文章連結：</strong>
-    <a href="https://tsouminhan.github.io/2021/03/18/python/sqlite/" title="python - sqlite 設定資料庫">https://tsouminhan.github.io/2021/03/18/python/sqlite/</a>
+    <a href="https://tsouminhan.github.io/2021/03/18/python/sqlite/" title="Python - sqlite 設定資料庫">https://tsouminhan.github.io/2021/03/18/python/sqlite/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh_TW" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！
@@ -274,7 +280,7 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
+              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
           </div>
 
         
@@ -283,10 +289,13 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/03/18/python/asyncio/" rel="prev" title="python - asyncio 同步執行、下載圖片">
-      <i class="fa fa-chevron-left"></i> python - asyncio 同步執行、下載圖片
+    <a href="/2021/03/18/python/asyncio/" rel="prev" title="Python - asyncio 同步執行、下載圖片">
+      <i class="fa fa-chevron-left"></i> Python - asyncio 同步執行、下載圖片
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/03/21/python/datetime/" rel="next" title="datetime">
+      datetime <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -368,7 +377,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -381,7 +390,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -426,13 +435,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">總字數：</span>
-    <span title="總字數">23k</span>
+    <span title="總字數">26k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
-    <span title="所需總閱讀時間">21 分鐘</span>
+    <span title="所需總閱讀時間">23 分鐘</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
   </div>
@@ -502,7 +511,7 @@
   var disqus_config = function() {
     this.page.url = "https://tsouminhan.github.io/2021/03/18/python/sqlite/";
     this.page.identifier = "2021/03/18/python/sqlite/";
-    this.page.title = "python - sqlite 設定資料庫";
+    this.page.title = "Python - sqlite 設定資料庫";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {

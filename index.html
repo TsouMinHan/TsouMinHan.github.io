@@ -165,6 +165,122 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://tsouminhan.github.io/2021/03/21/python/datetime/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head_photo.JPG">
+      <meta itemprop="name" content="小奇毛">
+      <meta itemprop="description" content="總之，弄這個網站比想像中的好玩">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小奇毛的部落格">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/21/python/datetime/" class="post-title-link" itemprop="url">datetime</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2021-03-21 14:00:15" itemprop="dateCreated datePublished" datetime="2021-03-21T14:00:15+08:00">2021-03-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2021/03/21/python/datetime/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/03/21/python/datetime/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>935</span>
+            </span>
+            <span class="post-meta-item" title="所需閱讀時間">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+              <span>1 分鐘</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <a id="more"></a>
+
+<ul>
+<li>轉換型態</li>
+<li>天數相加 </li>
+<li>算時間差 </li>
+</ul>
+<p>轉換型態</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># datetime to string</span></span><br><span class="line">datetime.datetime.now().strftime(<span class="string">"%Y-%m-%d %H:%M:%S"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># string to datetime</span></span><br><span class="line">datetime.datetime.strptime(<span class="string">"2014-12-31 18:20:10"</span>, <span class="string">"%Y-%m-%d %H:%M:%S"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>天數相加</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">datetime.date.today() + datetime.timedelta(days=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<p>計算時間差</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(datetime.datetime(<span class="number">2015</span>,<span class="number">1</span>,<span class="number">13</span>,<span class="number">12</span>,<span class="number">0</span>,<span class="number">0</span>) - datetime.datetime.now()).total_seconds()</span><br><span class="line">(datetime.datetime(<span class="number">2015</span>,<span class="number">1</span>,<span class="number">13</span>,<span class="number">12</span>,<span class="number">0</span>,<span class="number">0</span>) - datetime.datetime.now()).days</span><br><span class="line">(datetime.datetime(<span class="number">2015</span>,<span class="number">1</span>,<span class="number">13</span>,<span class="number">12</span>,<span class="number">0</span>,<span class="number">0</span>) + datetime.timedelta(days=<span class="number">1</span>)  </span><br><span class="line">(datetime.datetime(<span class="number">2015</span>,<span class="number">1</span>,<span class="number">13</span>,<span class="number">12</span>,<span class="number">0</span>,<span class="number">0</span>) + datetime.timedelta(minutes=<span class="number">5</span>)  </span><br><span class="line">(datetime.datetime(<span class="number">2015</span>,<span class="number">1</span>,<span class="number">13</span>,<span class="number">12</span>,<span class="number">0</span>,<span class="number">0</span>) + datetime.timedelta(seconds=<span class="number">60</span>)  </span><br><span class="line">(datetime.datetime(<span class="number">2015</span>,<span class="number">1</span>,<span class="number">13</span>,<span class="number">12</span>,<span class="number">0</span>,<span class="number">0</span>) + datetime.timedelta(days=<span class="number">1</span>,minutes=<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+
+<p>轉換時區</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">import</span> pytz</span><br><span class="line"></span><br><span class="line">d = datetime.today()</span><br><span class="line"><span class="comment">#create Taipei timezone</span></span><br><span class="line">tw = pytz.timezone(<span class="string">'Asia/Taipei'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#set d timezone is 'Asia/Taipei'</span></span><br><span class="line">twdt = tw.localize(d)</span><br><span class="line"></span><br><span class="line"><span class="comment">#change to utc time</span></span><br><span class="line">utc_dt = twdt.astimezone(pytz.utc)</span><br></pre></td></tr></table></figure>
+
+<p>有轉換時區跟沒轉換時區的做運算可能會出問題，把時區弄掉就好</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tw.localize(d).replace(tzinfo=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://tsouminhan.github.io/2021/03/18/python/sqlite/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -179,7 +295,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/03/18/python/sqlite/" class="post-title-link" itemprop="url">python - sqlite 設定資料庫</a>
+            <a href="/2021/03/18/python/sqlite/" class="post-title-link" itemprop="url">Python - sqlite 設定資料庫</a>
         </h2>
 
         <div class="post-meta">
@@ -197,7 +313,7 @@
               </span>
               <span class="post-meta-item-text">分類於</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                  <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
                 </span>
             </span>
 
@@ -221,14 +337,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">文章字數：</span>
-              <span>700</span>
+              <span>1.9k</span>
             </span>
             <span class="post-meta-item" title="所需閱讀時間">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-              <span>1 分鐘</span>
+              <span>2 分鐘</span>
             </span>
 
         </div>
@@ -240,7 +356,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>紀錄自己在使用 <code>sqlite</code> 的程式碼片段，基本上一個專案只會打一次，所以常常忘記。</p>
+          <p>紀錄自己在使用 <strong>SQLite</strong> 的程式碼片段，基本上一個專案只會打一次，所以常常忘記。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/03/18/python/sqlite/#more" rel="contents">
@@ -281,7 +397,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/03/18/python/asyncio/" class="post-title-link" itemprop="url">python - asyncio 同步執行、下載圖片</a>
+            <a href="/2021/03/18/python/asyncio/" class="post-title-link" itemprop="url">Python - asyncio 同步執行、下載圖片</a>
         </h2>
 
         <div class="post-meta">
@@ -299,7 +415,7 @@
               </span>
               <span class="post-meta-item-text">分類於</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                  <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
                 </span>
             </span>
 
@@ -401,7 +517,7 @@
               </span>
               <span class="post-meta-item-text">分類於</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/reflection/" itemprop="url" rel="index"><span itemprop="name">reflection</span></a>
+                  <a href="/categories/%E5%BF%83%E5%BE%97/" itemprop="url" rel="index"><span itemprop="name">心得</span></a>
                 </span>
             </span>
 
@@ -485,7 +601,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/10/01/python/python-regular-expression/" class="post-title-link" itemprop="url">python正規化</a>
+            <a href="/2020/10/01/python/python-regular-expression/" class="post-title-link" itemprop="url">Python 正規化</a>
         </h2>
 
         <div class="post-meta">
@@ -494,9 +610,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2020-10-01 15:31:22 / 修改時間：21:00:12" itemprop="dateCreated datePublished" datetime="2020-10-01T15:31:22+08:00">2020-10-01</time>
+              <time title="創建時間：2020-10-01 15:31:22" itemprop="dateCreated datePublished" datetime="2020-10-01T15:31:22+08:00">2020-10-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2021-03-21 14:03:41" itemprop="dateModified" datetime="2021-03-21T14:03:41+08:00">2021-03-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+                </span>
             </span>
 
           
@@ -681,7 +812,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/09/python/traceback-package/" class="post-title-link" itemprop="url">traceback套件</a>
+            <a href="/2020/06/09/python/traceback-package/" class="post-title-link" itemprop="url">traceback 套件</a>
         </h2>
 
         <div class="post-meta">
@@ -699,7 +830,7 @@
               </span>
               <span class="post-meta-item-text">分類於</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                  <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
                 </span>
             </span>
 
@@ -1005,7 +1136,7 @@
               </span>
               <span class="post-meta-item-text">分類於</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                  <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
                 </span>
             </span>
 
@@ -1052,108 +1183,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/05/13/python/firebase-cloud-firestore/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://tsouminhan.github.io/2020/04/23/python/python-tips/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/head_photo.JPG">
-      <meta itemprop="name" content="小奇毛">
-      <meta itemprop="description" content="總之，弄這個網站比想像中的好玩">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小奇毛的部落格">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/23/python/python-tips/" class="post-title-link" itemprop="url">python 好用卻常忘記的指令</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2020-04-23 22:18:39" itemprop="dateCreated datePublished" datetime="2020-04-23T22:18:39+08:00">2020-04-23</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分類於</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2020/04/23/python/python-tips/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/04/23/python/python-tips/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="文章字數">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">文章字數：</span>
-              <span>1.1k</span>
-            </span>
-            <span class="post-meta-item" title="所需閱讀時間">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-              <span>1 分鐘</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>python有很多指令都很方便使用，但也不是每次都會記起來那些指令怎麼使用，因此在這邊記錄下來。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/04/23/python/python-tips/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -1244,7 +1273,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -1257,7 +1286,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -1302,13 +1331,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">總字數：</span>
-    <span title="總字數">23k</span>
+    <span title="總字數">26k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
-    <span title="所需總閱讀時間">21 分鐘</span>
+    <span title="所需總閱讀時間">23 分鐘</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
   </div>
